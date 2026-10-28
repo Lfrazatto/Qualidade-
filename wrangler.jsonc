@@ -1,0 +1,45 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "iveco-cummins-performance",
+  "main": "dist/worker.mjs",
+  "compatibility_date": "2026-10-22",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "iveco-cummins-content",
+      "database_id": "e6a23607-9a67-4e09-8ab5-d26392603c2a"
+    }
+  ],
+  "r2_buckets": [
+    { "binding": "MEDIA", "bucket_name": "iveco-cummins-media" }
+  ],
+  "vars": {
+    "ADMIN_EMAIL": "lmpfrazatto@gmail.com",
+    "ACCESS_TEAM_DOMAIN": "https://young-dream-8b46.cloudflareaccess.com",
+    "ACCESS_APP_AUD": "ed81619a2be76102ab2361b095b53579d61aa357f6668618ef6fb5eb3bf03080"
+  },
+  "env": {
+    "admin": {
+      "name": "iveco-cummins-performance-admin",
+      "workers_dev": true,
+      "observability": { "enabled": true },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "iveco-cummins-content",
+          "database_id": "e6a23607-9a67-4e09-8ab5-d26392603c2a"
+        }
+      ],
+      "r2_buckets": [
+        { "binding": "MEDIA", "bucket_name": "iveco-cummins-media" }
+      ],
+      "vars": {
+        "ADMIN_EMAIL": "lmpfrazatto@gmail.com",
+        "ACCESS_TEAM_DOMAIN": "https://young-dream-8b46.cloudflareaccess.com",
+        "ACCESS_APP_AUD": "ed81619a2be76102ab2361b095b53579d61aa357f6668618ef6fb5eb3bf03080"
+      }
+    }
+  }
+}

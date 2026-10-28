@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#111923">
+  <title>Administração — Rota / Vetor</title>
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script defer src="/admin/admin.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#painel">Pular para o painel</a>
+  <header class="admin-header">
+    <a class="admin-brand" href="/">ROTA <span>/</span> VETOR <small>ADMIN</small></a>
+    <span class="admin-lock">CLOUDFLARE ACCESS · ADMINISTRADOR AUTORIZADO</span>
+    <a href="/" class="back-link">Ver site público ↗</a>
+  </header>
+  <main id="painel" class="admin-layout">
+    <aside class="admin-side">
+      <p class="side-eyebrow">CONTEÚDO</p>
+      <label for="collection-select">Coleção</label>
+      <select id="collection-select">
+        <option value="content_pages">Páginas e conteúdo</option>
+        <option value="timeline_events">Linha do tempo</option>
+        <option value="truck_models">Modelos IVECO</option>
+        <option value="model_specs">Especificações</option>
+        <option value="sources">Fontes e licenças</option>
+        <option value="truck_hotspots">Pontos interativos</option>
+        <option value="media_assets">Mídias e créditos</option>
+        <option value="games">Jogos e atividades</option>
+        <option value="quiz_questions">Perguntas opcionais</option>
+        <option value="events">Eventos</option>
+        <option value="participants">Participantes</option>
+        <option value="scores">Pontuações</option>
+        <option value="site_settings">Configurações</option>
+        <option value="audit_log">Registro de alterações</option>
+      </select>
+      <button id="refresh-button" class="secondary-button" type="button">Atualizar registros ↻</button>
+      <p class="side-note">Até 200 registros. Não cadastre dados pessoais desnecessários. Participantes e placares públicos usam somente pseudônimo. Quiz e pontuação ficam inativos até ativação explícita.</p>
+      <div class="admin-status"><i></i><span>Você está na área protegida.</span></div>
+    </aside>
+    <section class="admin-main">
+      <div class="admin-title-row">
+        <div>
+          <p class="eyebrow">PAINEL DE EDIÇÃO · D1 / R2</p>
+          <h1 id="collection-title">Páginas e conteúdo</h1>
+          <p id="collection-description">Edite registros persistentes. Campos desconhecidos são ignorados pelo servidor.</p>
+        </div>
+        <button id="new-record" class="primary-button" type="button">＋ Novo registro</button>
+      </div>
+      <aside class="admin-guidance" aria-label="Orientações para recursos opcionais">
+        <p><strong>Páginas públicas:</strong> em Páginas e conteúdo, use como <code>slug</code> o caminho sem barras (por exemplo <code>historia</code>, <code>qualidade</code> ou <code>modelos</code>) e publique o registro para que o texto apareça naquela rota. O conteúdo editorial sem slug de rota continua listado em Fontes e transparência.</p>
+        <p><strong>Explicações de peças:</strong> use os slugs <code>pecas-engine</code>, <code>pecas-transmission</code>, <code>pecas-driveline</code>, <code>pecas-brakes</code>, <code>pecas-axles</code>, <code>pecas-wheels</code>, <code>pecas-cab</code> ou <code>pecas-fuel</code> para substituir título e texto daquela seleção a partir do D1. Pontos da fotografia são editados separadamente em Pontos interativos; mantenha fontes e ressalvas de configuração.</p>
+        <p><strong>Imagem principal:</strong> envie a imagem autorizada para R2, copie a chave exibida após o upload e crie em Configurações o registro <code>key=hero_image_key</code> com <code>value</code> igual à chave. Texto alternativo, legenda, crédito e licença devem acompanhar o ativo. Ao substituir a imagem, ajuste também posições e explicações dos hotspots.</p>
+        <p><strong>Vídeo de abertura (opcional):</strong> envie somente vídeo MP4 ou WebM com autorização documentada (autor, licença e origem). Em Configurações, crie <code>key=hero_video_key</code> com a chave do vídeo e, para a imagem de capa, <code>key=hero_video_poster_key</code> com a chave de uma imagem já enviada. O vídeo começa sem áudio, pode ser pausado pelo visitante e é ocultado por quem prefere movimento reduzido. Sem esses registros, o site usa a fotografia estática.</p>
+        <p><strong>Quiz opcional:</strong> cada pergunta ativa precisa ter <code>options_json</code> como lista JSON de 2 a 8 alternativas; <code>correct_option</code> é o índice começando em zero. Associe uma fonte. Para exibir perguntas ativas, configure <code>key=quiz_enabled</code> e <code>value=true</code>. O quiz permanece opcional.</p>
+        <p><strong>Jogos e eventos:</strong> <code>is_enabled</code> controla os módulos existentes: <code>truck-explorer</code> e <code>mission-simulator</code>; um slug novo não cria uma mecânica nova. Para abrir pontuação, configure evento real com <code>active=1</code>, datas ISO, <code>accept_scores=1</code> e, se desejar placar, <code>show_leaderboard=1</code>. Não use nome ou e-mail real de participante; o site solicita pseudônimo e consentimento.</p>
+      </aside>
+      <div class="admin-toolbar">
+        <span id="record-count">Carregando…</span>
+        <span class="toolbar-note">Publicação ativa fica visível imediatamente no site.</span>
+      </div>
+      <div id="record-list" class="record-list" aria-live="polite"><p class="loading">Consultando o banco do projeto…</p></div>
+      <section class="upload-panel">
+        <div>
+          <p class="eyebrow">ARQUIVOS NO R2</p>
+          <h2>Adicionar mídia</h2>
+          <p>JPEG, PNG ou WebP até 5 MB; vídeo MP4 ou WebM até 25 MB. Para materiais de terceiros, registre autor, licença e página original.</p>
+        </div>
+        <form id="upload-form">
+          <label>Arquivo (imagem ou vídeo)<input type="file" name="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm" required></label>
+          <label>Texto alternativo<input name="alt_text" maxlength="250" required></label>
+          <label>Legenda<input name="caption" maxlength="500"></label>
+          <label>Crédito / autor<input name="attribution" maxlength="500" required></label>
+          <label>Licença<input name="license" maxlength="120" placeholder="Arte própria, CC BY-SA 4.0, ..." required></label>
+          <label>URL do original<input name="source_url" type="url" maxlength="2000" placeholder="https://..."></label>
+          <button class="primary-button" type="submit">Enviar para R2</button>
+          <p id="upload-status" class="form-status" role="status"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+  <dialog id="record-dialog">
+    <form id="record-form" method="dialog">
+      <div class="dialog-heading">
+        <div><p class="eyebrow">REGISTRO EDITORIAL</p><h2 id="dialog-title">Novo registro</h2></div>
+        <button class="close-button" value="cancel" aria-label="Fechar">×</button>
+      </div>
+      <input type="hidden" id="record-id">
+      <div id="form-fields" class="form-fields"></div>
+      <div class="dialog-actions"><button class="secondary-button" value="cancel">Cancelar</button><button id="save-record" class="primary-button" value="save">Salvar alterações</button></div>
+      <p class="dialog-hint">Para publicar páginas ou registros editoriais, defina explicitamente status = published. Registros novos começam como rascunho quando aplicável.</p>
+    </form>
+  </dialog>
+  <div id="admin-toast" class="admin-toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {"slug":"home","path":"/","file":"home.html","title":"Qualidade em movimento — Rota / Vetor","description":"Uma experiência independente sobre qualidade, componentes e performance no universo dos caminhões."},
+  {"slug":"historia","path":"/historia","file":"historia.html","title":"História e colaboração — Rota / Vetor","description":"História independente de IVECO e Cummins, com marcos documentados e limites da colaboração histórica."},
+  {"slug":"qualidade","path":"/qualidade","file":"qualidade.html","title":"Qualidade em caminhões — Rota / Vetor","description":"Um percurso didático pelos critérios de qualidade, inspeção e confiabilidade, sem atribuir processos não comprovados."},
+  {"slug":"pecas","path":"/pecas","file":"pecas.html","title":"Peças e componentes — Rota / Vetor","description":"Explore funções gerais de sistemas de caminhões e fotografias documentais com origem e limites à vista."},
+  {"slug":"desempenho","path":"/desempenho","file":"desempenho.html","title":"Desempenho e operação — Rota / Vetor","description":"Eficiência, eficácia e efetividade em contexto, com simulador didático não técnico."},
+  {"slug":"modelos","path":"/modelos","file":"modelos.html","title":"Modelos IVECO — Rota / Vetor","description":"Modelos publicados, fichas técnicas com contexto e fontes oficiais para consulta."},
+  {"slug":"experiencia","path":"/experiencia","file":"experiencia.html","title":"Experiência interativa — Rota / Vetor","description":"Uma prática de qualidade, leitura de evidências e aprendizagem individual, sem ranking público."},
+  {"slug":"fontes","path":"/fontes","file":"fontes.html","title":"Fontes e transparência — Rota / Vetor","description":"Consulte fontes, créditos de mídia, critérios editoriais e os limites deste projeto independente."}
+]

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06090d">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Uma experiência independente sobre qualidade, componentes e performance no universo dos caminhões.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Qualidade em movimento — Rota / Vetor</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2306090d'/%3E%3Cpath fill='%238c99a5' d='M7 24 12 8h3l-5 16z'/%3E%3Cpath fill='%232f6bff' d='M14 24 20 5h3.500l-6 19z'/%3E%3Cpath fill='%23fff' d='M22 24 26 11h3l-4 13z'/%3E%3C/svg%3E">
+  <link rel="preload" href="/fonts/inter-display-800.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body data-page="home">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-engine" viewBox="0 0 24 24"><path d="M3 11h2V8h4V6h5v2h3v3h2v6h-2v2H8l-2-2H3z"/><path d="M9 13h6"/></symbol>
+    <symbol id="i-transmission" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.500"/><path d="M12 3v3.500M12 17.500V21M3 12h3.500M17.500 12H21M5.600 5.600l2.400 2.400M16 16l2.400 2.400M18.400 5.600 16 8M8 16l-2.400 2.400"/></symbol>
+    <symbol id="i-driveline" viewBox="0 0 24 24"><path d="M2 12h5M17 12h5"/><rect x="7" y="8.500" width="10" height="7" rx="1"/><path d="M10 8.500v7M14 8.500v7"/></symbol>
+    <symbol id="i-brakes" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="2.500"/><path d="M16 4.800 20 9l-3.500 2.500z"/></symbol>
+    <symbol id="i-axles" viewBox="0 0 24 24"><path d="M3 12h18"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><path d="M12 12V7"/></symbol>
+    <symbol id="i-wheels" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.500"/><path d="M12 3v5.500M12 15.500V21M3 12h5.500M15.500 12H21"/></symbol>
+    <symbol id="i-cab" viewBox="0 0 24 24"><path d="M2.500 17.500V9l3-4.500H14l3 4.500h4.500v8.500z"/><path d="M5.500 9H14"/><circle cx="8" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-fuel" viewBox="0 0 24 24"><path d="M5 20.500V5.500a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M4 20.500h12M15 10h2a2 2 0 0 1 2 2v4a1.500 1.500 0 0 0 3 0V8l-3-3"/><path d="M8 8h4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.500 3 8 7 9 4-1 7-4.500 7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3v3l5 6-5 6v3M17 3v3l-5 6 5 6v3"/></symbol>
+    <symbol id="i-speed" viewBox="0 0 24 24"><path d="M3 17a9 9 0 1 1 18 0"/><path d="m12 17 4-6"/><circle cx="12" cy="17" r="1.200"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <header class="site-header" id="topo">
+    <div class="header-shell">
+      <a class="wordmark" href="/" aria-label="Rota / Vetor — página inicial">
+        <svg class="wordmark-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="g1" d="M5 27 11 7h3.600L8.600 27z"/><path class="g2" d="M13 27 20 3h4l-7 24z"/><path class="g3" d="M22 27 27 10h3.400L25.400 27z"/></svg>
+        <span class="wordmark-text"><strong>Rota<b>/</b>Vetor</strong><small>Qualidade em movimento</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/" data-route-link="home">Início</a></li>
+          <li><a href="/historia" data-route-link="historia">História</a></li>
+          <li><a href="/qualidade" data-route-link="qualidade">Qualidade</a></li>
+          <li><a href="/pecas" data-route-link="pecas">Peças</a></li>
+          <li><a href="/desempenho" data-route-link="desempenho">Desempenho</a></li>
+          <li><a href="/modelos" data-route-link="modelos">Modelos</a></li>
+          <li><a href="/experiencia" data-route-link="experiencia">Experiência</a></li>
+          <li><a href="/fontes" data-route-link="fontes">Fontes</a></li>
+        </ul>
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <p class="nav-note">Projeto editorial independente e não oficial.</p>
+      </nav>
+      <a class="header-cta" href="/experiencia">Praticar <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir navegação"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="conteudo" class="page-main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+  <div class="hero-media" data-hero-frame>
+    <img data-hero-image src="/media/sway-hero.webp" srcset="/media/sway-hero-640.webp 640w, /media/sway-hero-1280.webp 1280w, /media/sway-hero-1920.webp 1920w, /media/sway-hero-2560.webp 2560w" sizes="100vw" alt="IVECO S-Way 500 AS440S50T/FP em exposição na IAA Transportation 2024" width="2560" height="1440" fetchpriority="high">
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-ruler" aria-hidden="true"></div>
+  <div class="hero-inner page-shell">
+    <p class="kicker enter" style="--d:.45s">Caminhões, engenharia e operação</p>
+    <h1 id="hero-title" class="h-hero"><span class="tl"><span style="--d:.55s">Qualidade</span></span> <span class="tl"><span style="--d:.65s">que move</span></span> <span class="tl"><span style="--d:.75s">o desempenho.</span></span></h1>
+    <p class="lede enter" style="--d:1s">Por trás de cada quilômetro existe uma combinação de engenharia, precisão, confiabilidade e controle. Explore os fatores que influenciam a qualidade e o desempenho dos veículos comerciais e de seus componentes.</p>
+    <div class="hero-actions enter" style="--d:1.15s">
+      <a class="button" href="/qualidade">Explorar a qualidade <span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="button button-ghost" href="/pecas">Conhecer a engenharia</a>
+    </div>
+  </div>
+  <ul class="hero-stats page-shell enter" style="--d:1.4s" aria-label="O projeto em números">
+    <li><strong data-count="10">10</strong><span>dimensões da qualidade</span></li>
+    <li><strong data-count="8">8</strong><span>sistemas do caminhão</span></li>
+    <li><strong data-count="3">3</strong><span>conceitos de desempenho</span></li>
+    <li data-live-sources hidden><strong data-count="0">0</strong><span>fontes consultadas</span></li>
+  </ul>
+  <div class="hero-foot page-shell enter" style="--d:1.6s">
+    <p class="hero-caption"><span id="hero-image-caption">IVECO S-Way 500 AS440S50T/FP · IAA Transportation 2024</span> · <span id="hero-image-credit">MarcelX42 · CC BY-SA 4.0</span> · <a id="hero-image-source" href="https://commons.wikimedia.org/wiki/File:Iveco_S-Way_500_AS440S50T_FP_IAA_Transportation_2024_%28DSC04500%29.jpg" target="_blank" rel="noopener noreferrer">Crédito e licença</a></p>
+    <div class="hero-controls"><button class="video-toggle" type="button" data-video-toggle hidden aria-pressed="false">Pausar vídeo</button><button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pausar movimento</button></div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Precisão<i></i>Inspeção<i></i>Montagem<i></i>Confiabilidade<i></i>Manutenção<i></i>Segurança<i></i>Consistência<i></i>Missão<i></i></span>
+  <span>Precisão<i></i>Inspeção<i></i>Montagem<i></i>Confiabilidade<i></i>Manutenção<i></i>Segurança<i></i>Consistência<i></i>Missão<i></i></span>
+</div></div>
+
+<section class="section theme-light home-behind" aria-labelledby="behind-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Antes do quilômetro</p><h2 id="behind-title" class="h-section">O que existe por trás do desempenho?</h2></div>
+      <p class="lede">Desempenho não nasce em um único componente. Ele resulta de como materiais, peças, processos, manutenção e condições de uso se combinam ao longo da vida do veículo.</p>
+    </div>
+    <div class="behind-grid">
+      <figure class="behind-figure" data-reveal="mask">
+        <img data-parallax="0.06" src="/media/tector-fenatran.webp" srcset="/media/tector-fenatran-480.webp 480w, /media/tector-fenatran-960.webp 960w, /media/tector-fenatran-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 44vw" alt="IVECO Tector de 8 toneladas apresentado na Fenatran 2017" width="1280" height="853" loading="lazy" decoding="async">
+        <figcaption>Tector 8 t · Fenatran 2017 · foto de arquivo, não é registro de fábrica. <a href="/fontes#creditos">Crédito</a></figcaption>
+      </figure>
+      <ul class="behind-list" data-stagger>
+        <li><a href="/qualidade#dim-materiais"><h3 class="h-card">Materiais</h3><p>Suportam carga, calor, vibração e corrosão. O requisito vem do projeto e do ambiente de uso.</p><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a></li>
+        <li><a href="/pecas"><h3 class="h-card">Componentes</h3><p>Motor, transmissão, eixos e freios trabalham em conjunto. Cada peça precisa ser adequada à configuração do veículo.</p><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a></li>
+        <li><a href="/qualidade#dim-inspecao"><h3 class="h-card">Processos</h3><p>Fabricar, montar e inspecionar com método reduz a variação entre uma unidade e outra.</p><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a></li>
+        <li><a href="/qualidade#dim-manutencao"><h3 class="h-card">Manutenção</h3><p>Intervalos, inspeções e reposições planejadas ajudam a conservar o desempenho com o passar dos anos.</p><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a></li>
+        <li><a href="/desempenho"><h3 class="h-card">Condições de uso</h3><p>Carga, rota, clima e condução mudam o que o mesmo caminhão entrega na prática.</p><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section home-details" aria-labelledby="details-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Olhar de perto</p><h2 id="details-title" class="h-section">A qualidade em cada detalhe.</h2></div>
+      <p class="lede">Cinco dimensões que ajudam a ler a qualidade de um veículo. Escolha uma para ver o que a fotografia mostra, o que ela não prova e onde aprofundar.</p>
+    </div>
+    <div class="detail-tabs" data-tabs>
+      <div class="detail-tablist" role="tablist" aria-label="Dimensões da qualidade em destaque">
+        <button type="button" role="tab" id="dt-precisao" aria-controls="dp-precisao" aria-selected="true">Precisão</button>
+        <button type="button" role="tab" id="dt-inspecao" aria-controls="dp-inspecao" aria-selected="false" tabindex="-1">Inspeção</button>
+        <button type="button" role="tab" id="dt-montagem" aria-controls="dp-montagem" aria-selected="false" tabindex="-1">Montagem</button>
+        <button type="button" role="tab" id="dt-confiabilidade" aria-controls="dp-confiabilidade" aria-selected="false" tabindex="-1">Confiabilidade</button>
+        <button type="button" role="tab" id="dt-seguranca" aria-controls="dp-seguranca" aria-selected="false" tabindex="-1">Segurança</button>
+      </div>
+      <div class="detail-panels">
+        <article class="detail-panel tab-panel" role="tabpanel" id="dp-precisao" aria-labelledby="dt-precisao">
+          <figure class="detail-figure"><img src="/media/detail-grille-960.webp" srcset="/media/detail-grille-480.webp 480w, /media/detail-grille-960.webp 960w, /media/detail-grille-1050.webp 1050w" sizes="(max-width: 900px) 100vw, 50vw" alt="Recorte de detalhe da grade e dos faróis de um IVECO S-Way" width="960" height="768" loading="lazy" decoding="async"><figcaption><b>Na foto:</b> o alinhamento visível entre grade, faróis e painéis. <b>Não prova:</b> medidas ou tolerâncias.</figcaption></figure>
+          <div class="detail-copy"><h3 class="h-card">Precisão e acabamento</h3><p>Pequenas diferenças dimensionais podem alterar o encaixe, o funcionamento e o desgaste de uma peça. Por isso a forma de medir e os limites aceitáveis são definidos para cada componente.</p><details><summary>Exemplo prático</summary><p>Um rolamento montado com folga fora da especificação pode aquecer e desgastar mais rápido, mesmo parecendo perfeito a olho nu.</p></details><a class="text-link" href="/qualidade#dim-precisao">Aprofundar em precisão <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="detail-panel tab-panel" role="tabpanel" id="dp-inspecao" aria-labelledby="dt-inspecao" hidden>
+          <figure class="detail-figure"><img src="/media/detail-cab-960.webp" srcset="/media/detail-cab-480.webp 480w, /media/detail-cab-960.webp 960w, /media/detail-cab-1440.webp 1440w" sizes="(max-width: 900px) 100vw, 50vw" alt="Recorte de detalhe do para-brisa e do defletor da cabine de um IVECO S-Way" width="960" height="581" loading="lazy" decoding="async"><figcaption><b>Na foto:</b> superfícies da cabine, vidro e acabamento externo. <b>Não prova:</b> que alguma inspeção foi feita.</figcaption></figure>
+          <div class="detail-copy"><h3 class="h-card">Inspeção e controle</h3><p>Inspecionar é medir, examinar ou testar e comparar o resultado com um critério definido. Sem método e limite de aceitação, observar não é o mesmo que concluir conformidade.</p><details><summary>Exemplo prático</summary><p>Conferir o torque de aperto de um parafuso com instrumento calibrado é diferente de apenas verificar se ele está presente.</p></details><a class="text-link" href="/qualidade#dim-inspecao">Aprofundar em inspeção <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="detail-panel tab-panel" role="tabpanel" id="dp-montagem" aria-labelledby="dt-montagem" hidden>
+          <figure class="detail-figure"><img src="/media/detail-wheel-715.webp" srcset="/media/detail-wheel-480.webp 480w, /media/detail-wheel-715.webp 715w" sizes="(max-width: 900px) 100vw, 50vw" alt="Recorte de detalhe de roda, cubo e lateral de um IVECO S-Way" width="715" height="660" loading="lazy" decoding="async"><figcaption><b>Na foto:</b> cubo, parafusos de roda e pneu visíveis por fora. <b>Não prova:</b> procedimento de montagem.</figcaption></figure>
+          <div class="detail-copy"><h3 class="h-card">Montagem e integração</h3><p>Uma peça correta ainda depende de interfaces compatíveis e de instalação adequada. Montagem é o momento em que vários componentes passam a funcionar como um conjunto.</p><details><summary>Exemplo prático</summary><p>Uma roda bem fabricada só cumpre sua função se o cubo, os parafusos e o torque de fixação seguirem a especificação do veículo.</p></details><a class="text-link" href="/qualidade#dim-montagem">Aprofundar em montagem <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="detail-panel tab-panel" role="tabpanel" id="dp-confiabilidade" aria-labelledby="dt-confiabilidade" hidden>
+          <figure class="detail-figure"><img src="/media/tector-profile-960.webp" srcset="/media/tector-profile-480.webp 480w, /media/tector-profile-960.webp 960w" sizes="(max-width: 900px) 100vw, 50vw" alt="IVECO Tector fotografado em estrada, vista frontal oblíqua" width="960" height="700" loading="lazy" decoding="async"><figcaption><b>Na foto:</b> um Tector em uso, sem ano ou versão informados. <b>Não prova:</b> durabilidade.</figcaption></figure>
+          <div class="detail-copy"><h3 class="h-card">Durabilidade e confiabilidade</h3><p>Só o tempo de uso mostra se um componente mantém sua função. Para falar de confiabilidade é preciso definir condições, período de observação e o que conta como falha.</p><details><summary>Exemplo prático</summary><p>Dizer que um componente “dura muito” não informa nada sem dizer quantos quilômetros, em que carga e em que tipo de estrada.</p></details><a class="text-link" href="/qualidade#dim-durabilidade">Aprofundar em confiabilidade <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="detail-panel tab-panel" role="tabpanel" id="dp-seguranca" aria-labelledby="dt-seguranca" hidden>
+          <figure class="detail-figure"><img src="/media/daily-archive-960.webp" srcset="/media/daily-archive-480.webp 480w, /media/daily-archive-960.webp 960w, /media/daily-archive-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="IVECO Daily 35C15 de quarta geração, com baú, fotografado em Cracóvia" width="960" height="735" loading="lazy" decoding="async"><figcaption><b>Na foto:</b> faróis, retrovisores e pneus de uma Daily de 2011. <b>Não prova:</b> nível de segurança.</figcaption></figure>
+          <div class="detail-copy"><h3 class="h-card">Segurança</h3><p>Visibilidade, frenagem, estabilidade e proteção do motorista dependem de projeto, componentes, montagem e manutenção atuando juntos. Nenhuma característica isolada garante segurança.</p><details><summary>Exemplo prático</summary><p>Freios novos continuam dependendo de pneus em bom estado e de uma carga bem distribuída para frear de forma previsível.</p></details><a class="text-link" href="/qualidade#dim-seguranca">Aprofundar em segurança <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </div>
+    <p class="micro detail-note">Fotografias de arquivo com crédito e licença em <a href="/fontes#creditos">Fontes</a>. Os recortes de detalhe são do mesmo S-Way da abertura e não indicam processo de fábrica.</p>
+  </div>
+</section>
+
+<section class="section theme-graphite home-motion" aria-labelledby="motion-title">
+  <div class="page-shell">
+    <div class="motion-intro">
+      <div><p class="kicker">Sistemas em conjunto</p><h2 id="motion-title" class="h-section">Engenharia em movimento.</h2></div>
+      <p class="lede">Um caminhão só entrega resultado quando seus sistemas cooperam. Cada um tem uma função geral; configuração, fornecedor e especificação mudam conforme o modelo, a versão e o mercado.</p>
+    </div>
+  </div>
+  <figure class="motion-figure" data-reveal="mask">
+    <img data-parallax="0.07" src="/media/sway-hero-1920.webp" srcset="/media/sway-hero-1280.webp 1280w, /media/sway-hero-1920.webp 1920w, /media/sway-hero-2560.webp 2560w" sizes="100vw" alt="IVECO S-Way em exposição, vista frontal oblíqua" width="1920" height="1080" loading="lazy" decoding="async">
+  </figure>
+  <div class="page-shell">
+    <div class="system-rail" role="list" aria-label="Sistemas do caminhão — deslize para ver todos" data-rail tabindex="0">
+      <a role="listitem" class="system-card" href="/pecas?sistema=engine"><svg class="icon"><use href="#i-engine"/></svg><h3 class="h-card">Motor</h3><p>Converte a energia do combustível em potência mecânica.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=transmission"><svg class="icon"><use href="#i-transmission"/></svg><h3 class="h-card">Transmissão</h3><p>Adapta torque e velocidade entre o motor e as rodas.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=driveline"><svg class="icon"><use href="#i-driveline"/></svg><h3 class="h-card">Trem de força</h3><p>Conduz a potência do motor até os eixos.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=brakes"><svg class="icon"><use href="#i-brakes"/></svg><h3 class="h-card">Freios</h3><p>Reduzem a velocidade e imobilizam o veículo.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=axles"><svg class="icon"><use href="#i-axles"/></svg><h3 class="h-card">Eixos</h3><p>Sustentam a carga e, conforme o arranjo, transmitem tração.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=wheels"><svg class="icon"><use href="#i-wheels"/></svg><h3 class="h-card">Rodas e pneus</h3><p>Fazem o contato com a via: carga, tração e frenagem.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=cab"><svg class="icon"><use href="#i-cab"/></svg><h3 class="h-card">Cabine</h3><p>Espaço de trabalho, visibilidade e comandos do motorista.</p></a>
+      <a role="listitem" class="system-card" href="/pecas?sistema=fuel"><svg class="icon"><use href="#i-fuel"/></svg><h3 class="h-card">Alimentação</h3><p>Armazena e entrega a fonte de energia ao conjunto de propulsão.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-steel home-concepts" aria-labelledby="concepts-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Três perguntas diferentes</p><h2 id="concepts-title" class="h-section">Eficiência, eficácia e efetividade.</h2></div>
+      <p class="lede">Parecem sinônimos, mas respondem a perguntas distintas. Troque o contexto para ver o mesmo conceito aplicado à indústria, à manutenção e ao transporte.</p>
+    </div>
+    <div class="concept-lab" data-scenario="frota">
+      <div class="scenario-pick" role="group" aria-label="Contexto do exemplo">
+        <button type="button" class="chip is-active" data-scenario-set="frota" aria-pressed="true">Manutenção de frota</button>
+        <button type="button" class="chip" data-scenario-set="linha" aria-pressed="false">Linha de montagem</button>
+        <button type="button" class="chip" data-scenario-set="carga" aria-pressed="false">Transporte de carga</button>
+      </div>
+      <div data-tabs>
+        <div class="concept-tablist" role="tablist" aria-label="Conceitos">
+          <button type="button" role="tab" id="ct-eficiencia" aria-controls="cp-eficiencia" aria-selected="true">Eficiência</button>
+          <button type="button" role="tab" id="ct-eficacia" aria-controls="cp-eficacia" aria-selected="false" tabindex="-1">Eficácia</button>
+          <button type="button" role="tab" id="ct-efetividade" aria-controls="cp-efetividade" aria-selected="false" tabindex="-1">Efetividade</button>
+        </div>
+        <div class="concept-panel tab-panel" role="tabpanel" id="cp-eficiencia" aria-labelledby="ct-eficiencia">
+          <svg class="diagram" viewBox="0 0 280 180" role="img" aria-label="Duas barras: o recurso usado é pequeno e o resultado obtido é maior"><line class="ax" x1="20" y1="150" x2="262" y2="150"/><rect class="bar bar-a" x="48" y="96" width="64" height="54" rx="2"/><rect class="bar bar-b" x="168" y="30" width="64" height="120" rx="2"/><text x="80" y="170" text-anchor="middle">Recurso usado</text><text x="200" y="170" text-anchor="middle">Resultado</text></svg>
+          <div class="concept-copy"><h3 class="h-card">Quanto foi necessário?</h3><p class="concept-def">Usar bem os recursos — tempo, material, energia, dinheiro — para chegar a um resultado.</p>
+            <p data-s="frota">A revisão de freios é feita com menos horas de oficina e sem desperdício de peças, seguindo o mesmo checklist.</p>
+            <p data-s="linha">Uma estação monta o conjunto com menos retrabalho e menos material perdido por unidade.</p>
+            <p data-s="carga">A rota é cumprida com menos combustível e menos tempo parado, para a mesma carga.</p></div>
+        </div>
+        <div class="concept-panel tab-panel" role="tabpanel" id="cp-eficacia" aria-labelledby="ct-eficacia" hidden>
+          <svg class="diagram" viewBox="0 0 280 180" role="img" aria-label="Alvo com uma flecha que atinge o centro"><circle class="ring" cx="170" cy="90" r="64"/><circle class="ring" cx="170" cy="90" r="42"/><circle class="ring" cx="170" cy="90" r="20"/><circle class="hit" cx="170" cy="90" r="6"/><line class="arrow-line" x1="20" y1="90" x2="164" y2="90"/><path class="arrow-head" d="M158 84 170 90 158 96z"/></svg>
+          <div class="concept-copy"><h3 class="h-card">A meta foi atingida?</h3><p class="concept-def">Alcançar o objetivo que foi definido, independentemente de quanto custou chegar lá.</p>
+            <p data-s="frota">Todos os itens do checklist de freios foram verificados e registrados dentro do prazo combinado.</p>
+            <p data-s="linha">O lote termina no volume e no padrão de especificação definidos para o pedido.</p>
+            <p data-s="carga">A carga chega ao destino no prazo e nas condições combinadas.</p></div>
+        </div>
+        <div class="concept-panel tab-panel" role="tabpanel" id="cp-efetividade" aria-labelledby="ct-efetividade" hidden>
+          <svg class="diagram" viewBox="0 0 280 180" role="img" aria-label="Linha de resultado que se mantém acima da meta ao longo do tempo"><line class="ax" x1="20" y1="150" x2="262" y2="150"/><line class="target" x1="20" y1="70" x2="262" y2="70"/><polyline class="trend" points="24,120 62,96 100,84 138,78 176,74 214,72 258,71"/><text x="258" y="166" text-anchor="end">tempo</text><text x="24" y="62">meta</text></svg>
+          <div class="concept-copy"><h3 class="h-card">O valor se sustenta?</h3><p class="concept-def">Produzir um resultado real e consistente no contexto de uso, ao longo do tempo.</p>
+            <p data-s="frota">Nos meses seguintes, a frota tem menos paradas não planejadas ligadas a freios — se esse resultado for medido e se mantiver.</p>
+            <p data-s="linha">Os conjuntos continuam funcionando como previsto depois de meses de uso real, sem falhas que se repetem.</p>
+            <p data-s="carga">O transporte segue viável ao longo do ano — custo, disponibilidade do veículo e satisfação do cliente — e não só em uma viagem.</p></div>
+        </div>
+      </div>
+      <p class="micro">Exemplos hipotéticos para ilustrar os conceitos. Não são dados reais de nenhuma empresa. <a href="/desempenho">Ver mais em Desempenho</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-graphite home-explore" aria-labelledby="explore-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Continue explorando</p><h2 id="explore-title" class="h-section">Explore o projeto.</h2></div>
+      <p class="lede">Cada página tem uma função: entender a qualidade, olhar os sistemas, praticar a leitura de desempenho ou conferir as fontes.</p>
+    </div>
+    <div class="explore-grid" data-stagger>
+      <a class="explore-card explore-lg" href="/qualidade"><img src="/media/detail-grille-960.webp" alt="" width="960" height="768" loading="lazy" decoding="async"><div><h3 class="h-section">Qualidade</h3><p>Dez dimensões, um percurso interativo e a ideia de melhoria contínua.</p></div><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="/pecas"><img src="/media/tector-fenatran-960.webp" alt="" width="960" height="640" loading="lazy" decoding="async"><div><h3 class="h-card">Peças e componentes</h3><p>Oito sistemas e uma fotografia para observar sem presumir.</p></div><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="/desempenho"><img src="/media/detail-wheel-715.webp" alt="" width="715" height="660" loading="lazy" decoding="async"><div><h3 class="h-card">Desempenho</h3><p>Eficiência, eficácia, efetividade e um simulador didático.</p></div><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="/modelos"><img src="/media/sway-hero-1280.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"><div><h3 class="h-card">Modelos</h3><p>Fichas com versão, mercado, ano e fonte.</p></div><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="/historia"><img src="/media/tector-profile-960.webp" alt="" width="960" height="700" loading="lazy" decoding="async"><div><h3 class="h-card">História</h3><p>Marcos documentados de IVECO, Cummins e de uma aliança encerrada.</p></div><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      <a class="explore-card" href="/experiencia"><img src="/media/detail-cab-960.webp" alt="" width="960" height="581" loading="lazy" decoding="async"><div><h3 class="h-card">Experiência</h3><p>Pratique a leitura de evidências e responda ao quiz opcional.</p></div><span class="go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="home-history-band theme-light" aria-labelledby="band-title">
+  <div class="page-shell band-inner">
+    <div><p class="kicker">História com limites claros</p><h2 id="band-title" class="h-section">Encontros históricos, sem atalhos para o presente.</h2></div>
+    <div><p class="lede">A European Engine Alliance reuniu Cummins, Iveco e New Holland em 1996; em 2008, a Cummins vendeu sua participação. O registro não comprova parceria atual.</p><p class="band-actions"><a class="button" href="/historia">Ver a linha do tempo <span class="arrow" aria-hidden="true">↗</span></a></p></div>
+  </div>
+</section>
+
+<section class="home-final" aria-labelledby="final-title">
+  <div class="page-shell final-inner">
+    <h2 id="final-title" class="h-hero">Comece pela qualidade.</h2>
+    <p class="lede">Leva poucos minutos para ver por que um bom resultado raramente depende de um único fator.</p>
+    <p class="hero-actions"><a class="button" href="/qualidade">Explorar a qualidade <span class="arrow" aria-hidden="true">↗</span></a><a class="button button-ghost" href="/fontes">Ver fontes e limites</a></p>
+    <p class="micro final-disclosure">Projeto editorial independente e não oficial. Afirmações empresariais têm fonte; as lacunas são declaradas.</p>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="page-shell footer-top">
+      <div class="footer-brand">
+        <a class="wordmark wordmark-footer" href="/" aria-label="Rota / Vetor — página inicial">
+          <svg class="wordmark-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="g1" d="M5 27 11 7h3.600L8.600 27z"/><path class="g2" d="M13 27 20 3h4l-7 24z"/><path class="g3" d="M22 27 27 10h3.400L25.400 27z"/></svg>
+          <span class="wordmark-text"><strong>Rota<b>/</b>Vetor</strong><small>Qualidade em movimento</small></span>
+        </a>
+        <p class="footer-statement">Um guia independente sobre o que sustenta o desempenho de um caminhão: material, precisão, controle, manutenção e missão.</p>
+      </div>
+      <nav class="footer-col" aria-label="Páginas do projeto">
+        <h2>Explorar</h2>
+        <ul>
+          <li><a href="/qualidade">Qualidade</a></li>
+          <li><a href="/pecas">Peças e componentes</a></li>
+          <li><a href="/desempenho">Desempenho</a></li>
+          <li><a href="/modelos">Modelos</a></li>
+          <li><a href="/historia">História</a></li>
+          <li><a href="/experiencia">Experiência</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Transparência">
+        <h2>Transparência</h2>
+        <ul>
+          <li><a href="/fontes">Fontes e referências</a></li>
+          <li><a href="/fontes#creditos">Créditos de imagens</a></li>
+          <li><a href="/fontes#licencas">Licenças</a></li>
+          <li><a href="/fontes#limites">Limites da informação</a></li>
+          <li><a href="/admin">Painel administrativo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page-shell footer-independence">
+      <p><strong>Projeto independente e não oficial.</strong> Rota / Vetor é uma iniciativa educativa e editorial. Não é oficial, patrocinado, aprovado ou endossado pela Cummins, pela IVECO ou pela Meritor, e não afirma parceria atual entre essas empresas. Nomes de marcas aparecem apenas para identificar assuntos e fotografias documentadas.</p>
+    </div>
+    <div class="page-shell footer-bottom">
+      <span>© 2026 Rota / Vetor</span>
+      <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pausar movimento</button>
+      <a class="back-top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06090d">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Eficiência, eficácia e efetividade em contexto, com simulador didático não técnico.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Desempenho e operação — Rota / Vetor</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2306090d'/%3E%3Cpath fill='%238c99a5' d='M7 24 12 8h3l-5 16z'/%3E%3Cpath fill='%232f6bff' d='M14 24 20 5h3.500l-6 19z'/%3E%3Cpath fill='%23fff' d='M22 24 26 11h3l-4 13z'/%3E%3C/svg%3E">
+  <link rel="preload" href="/fonts/inter-display-800.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body data-page="desempenho">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-engine" viewBox="0 0 24 24"><path d="M3 11h2V8h4V6h5v2h3v3h2v6h-2v2H8l-2-2H3z"/><path d="M9 13h6"/></symbol>
+    <symbol id="i-transmission" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.500"/><path d="M12 3v3.500M12 17.500V21M3 12h3.500M17.500 12H21M5.600 5.600l2.400 2.400M16 16l2.400 2.400M18.400 5.600 16 8M8 16l-2.400 2.400"/></symbol>
+    <symbol id="i-driveline" viewBox="0 0 24 24"><path d="M2 12h5M17 12h5"/><rect x="7" y="8.500" width="10" height="7" rx="1"/><path d="M10 8.500v7M14 8.500v7"/></symbol>
+    <symbol id="i-brakes" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="2.500"/><path d="M16 4.800 20 9l-3.500 2.500z"/></symbol>
+    <symbol id="i-axles" viewBox="0 0 24 24"><path d="M3 12h18"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><path d="M12 12V7"/></symbol>
+    <symbol id="i-wheels" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.500"/><path d="M12 3v5.500M12 15.500V21M3 12h5.500M15.500 12H21"/></symbol>
+    <symbol id="i-cab" viewBox="0 0 24 24"><path d="M2.500 17.500V9l3-4.500H14l3 4.500h4.500v8.500z"/><path d="M5.500 9H14"/><circle cx="8" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-fuel" viewBox="0 0 24 24"><path d="M5 20.500V5.500a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M4 20.500h12M15 10h2a2 2 0 0 1 2 2v4a1.500 1.500 0 0 0 3 0V8l-3-3"/><path d="M8 8h4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.500 3 8 7 9 4-1 7-4.500 7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3v3l5 6-5 6v3M17 3v3l-5 6 5 6v3"/></symbol>
+    <symbol id="i-speed" viewBox="0 0 24 24"><path d="M3 17a9 9 0 1 1 18 0"/><path d="m12 17 4-6"/><circle cx="12" cy="17" r="1.200"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <header class="site-header" id="topo">
+    <div class="header-shell">
+      <a class="wordmark" href="/" aria-label="Rota / Vetor — página inicial">
+        <svg class="wordmark-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="g1" d="M5 27 11 7h3.600L8.600 27z"/><path class="g2" d="M13 27 20 3h4l-7 24z"/><path class="g3" d="M22 27 27 10h3.400L25.400 27z"/></svg>
+        <span class="wordmark-text"><strong>Rota<b>/</b>Vetor</strong><small>Qualidade em movimento</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/" data-route-link="home">Início</a></li>
+          <li><a href="/historia" data-route-link="historia">História</a></li>
+          <li><a href="/qualidade" data-route-link="qualidade">Qualidade</a></li>
+          <li><a href="/pecas" data-route-link="pecas">Peças</a></li>
+          <li><a href="/desempenho" data-route-link="desempenho">Desempenho</a></li>
+          <li><a href="/modelos" data-route-link="modelos">Modelos</a></li>
+          <li><a href="/experiencia" data-route-link="experiencia">Experiência</a></li>
+          <li><a href="/fontes" data-route-link="fontes">Fontes</a></li>
+        </ul>
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <p class="nav-note">Projeto editorial independente e não oficial.</p>
+      </nav>
+      <a class="header-cta" href="/experiencia">Praticar <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir navegação"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="conteudo" class="page-main" tabindex="-1">
+    <section class="p-hero p-hero-light" aria-labelledby="page-title">
+  <div class="p-hero-bg" aria-hidden="true"><img src="/media/sway-hero-1280.webp" alt="" width="1280" height="720" decoding="async"></div>
+  <div class="page-shell p-hero-grid">
+    <div class="p-hero-copy">
+      <p class="kicker enter" style="--d:.3s">Desempenho</p>
+      <h1 id="page-title" class="h-hero"><span class="tl"><span style="--d:.4s">Desempenho</span></span> <span class="tl"><span style="--d:.5s">só faz sentido</span></span> <span class="tl"><span style="--d:.6s">com contexto.</span></span></h1>
+      <p class="lede enter" style="--d:.9s">Um resultado só responde à pergunta certa quando missão, recursos, horizonte de tempo e método de medição estão definidos.</p>
+      <p class="p-hero-links enter" style="--d:1.1s"><a class="button" href="#metricas">Comparar conceitos <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-ghost" href="#simulador">Abrir o laboratório</a></p>
+    </div>
+    <aside class="p-stamp p-formula enter" style="--d:1.2s" aria-label="Missão, recurso e tempo">
+      <span>Nenhum indicador isolado conta a história inteira</span>
+      <strong>Missão<i>×</i>Recurso<i>×</i>Tempo</strong>
+    </aside>
+  </div>
+</section>
+
+<section class="section theme-light perf-triad" id="metricas" aria-labelledby="performance-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Três perguntas · três leituras</p><h2 id="performance-title" class="h-section">Não são sinônimos.</h2></div>
+      <p class="lede">A comparação precisa de condições equivalentes: versão do veículo, carga, rota, condução, clima, manutenção e método.</p>
+    </div>
+    <div class="triad" data-stagger>
+      <article class="triad-card">
+        <svg class="diagram" viewBox="0 0 200 110" role="img" aria-label="Diagrama: recurso dividido por resultado"><rect x="10" y="20" width="70" height="70" class="d-fill"/><text x="45" y="62" text-anchor="middle" class="d-text">RECURSO</text><line x1="92" y1="55" x2="108" y2="55" class="d-line"/><rect x="120" y="35" width="70" height="40" class="d-stroke"/><text x="155" y="60" text-anchor="middle" class="d-text">RESULTADO</text></svg>
+        <p class="micro">Recurso ÷ resultado</p><h3 class="h-card">Eficiência</h3>
+        <p>Quanto recurso é necessário para alcançar um resultado, dentro de uma missão e de condições comparáveis.</p>
+        <p class="triad-q">Quanto foi necessário?</p>
+      </article>
+      <article class="triad-card">
+        <svg class="diagram" viewBox="0 0 200 110" role="img" aria-label="Diagrama: flecha que alcança a meta"><circle cx="150" cy="55" r="32" class="d-stroke"/><circle cx="150" cy="55" r="16" class="d-stroke"/><circle cx="150" cy="55" r="4" class="d-fill"/><line x1="14" y1="55" x2="140" y2="55" class="d-line"/><path d="M130 47l12 8-12 8" class="d-line d-nofill"/></svg>
+        <p class="micro">Meta ↔ entrega</p><h3 class="h-card">Eficácia</h3>
+        <p>Se a operação atingiu o objetivo acordado: carga, prazo, rota ou serviço especificado.</p>
+        <p class="triad-q">A meta foi atingida?</p>
+      </article>
+      <article class="triad-card">
+        <svg class="diagram" viewBox="0 0 200 110" role="img" aria-label="Diagrama: resultado sustentado ao longo do tempo"><path d="M10 90H190" class="d-line"/><path d="M10 80C40 78 60 60 90 52S150 36 190 30" class="d-line d-nofill d-accent"/><circle cx="190" cy="30" r="5" class="d-fill"/><text x="100" y="104" text-anchor="middle" class="d-text">TEMPO</text></svg>
+        <p class="micro">Resultado ↔ tempo</p><h3 class="h-card">Efetividade</h3>
+        <p>Se o resultado funciona de modo consistente e produz impacto real ao longo do tempo e do contexto.</p>
+        <p class="triad-q">O valor se sustenta?</p>
+      </article>
+    </div>
+    <div class="perf-note" data-reveal><span class="tag tag-limit">Cuidado</span><p>Potência, torque, consumo ou disponibilidade não se comparam sem versão, condições e método.</p><a class="source-link" href="/fontes">Consultar fontes <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+
+<section class="section theme-graphite perf-factors" aria-labelledby="factors-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">O que influencia o resultado</p><h2 id="factors-title" class="h-section">Oito variáveis. Um só número nunca basta.</h2></div>
+      <p class="lede">Duas operações com o mesmo caminhão podem produzir resultados muito diferentes. Estes são fatores gerais; não são medições de nenhum veículo.</p>
+    </div>
+    <ul class="factors" data-stagger>
+      <li><span class="micro">01</span><h3 class="h-card">Missão</h3><p>Distribuição urbana, estrada ou fora de estrada exigem coisas diferentes.</p></li>
+      <li><span class="micro">02</span><h3 class="h-card">Carga</h3><p>Peso e distribuição mudam esforço, frenagem e consumo.</p></li>
+      <li><span class="micro">03</span><h3 class="h-card">Rota</h3><p>Relevo, trânsito e tipo de piso alteram o uso dos sistemas.</p></li>
+      <li><span class="micro">04</span><h3 class="h-card">Condução</h3><p>Antecipação e uso de marchas influenciam desgaste e eficiência.</p></li>
+      <li><span class="micro">05</span><h3 class="h-card">Clima</h3><p>Temperatura e altitude afetam refrigeração, aderência e rendimento.</p></li>
+      <li><span class="micro">06</span><h3 class="h-card">Manutenção</h3><p>Intervalos cumpridos preservam o desempenho ao longo do tempo.</p></li>
+      <li><span class="micro">07</span><h3 class="h-card">Versão</h3><p>Motor, eixos, transmissão e calibração mudam entre versões e mercados.</p></li>
+      <li><span class="micro">08</span><h3 class="h-card">Método</h3><p>Ciclo de teste, unidade e condição definem se dois números são comparáveis.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section theme-steel simulator-section" id="simulador" aria-labelledby="sim-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Laboratório de aprendizagem</p><h2 id="sim-title" class="h-section">A missão muda. A leitura também.</h2></div>
+      <p class="lede">Ajuste os controles para observar um compromisso abstrato entre prioridade e recursos. O índice não representa veículo, consumo ou desempenho medido.</p>
+    </div>
+    <div class="simulator-card" data-reveal>
+      <div class="simulator-inputs">
+        <p class="micro">Simulação didática · não técnica</p>
+        <h3 class="h-card">Monte um cenário</h3>
+        <label class="range-label" for="mission-range"><span>Prioridade da missão</span><output id="mission-output" for="mission-range">Equilíbrio</output></label>
+        <input id="mission-range" type="range" min="1" max="3" step="1" value="2" aria-describedby="mission-hint">
+        <div class="range-scale" aria-hidden="true"><span>Economizar recursos</span><span>Entregar no prazo</span></div>
+        <p class="field-hint" id="mission-hint">Ajuste a prioridade para observar como muda a leitura abstrata.</p>
+        <label class="range-label" for="resource-range"><span>Recursos disponíveis</span><output id="resource-output" for="resource-range">60 / 100</output></label>
+        <input id="resource-range" type="range" min="20" max="100" step="10" value="60" aria-describedby="resource-hint">
+        <div class="range-scale" aria-hidden="true"><span>Enxutos</span><span>Amplos</span></div>
+        <p class="field-hint" id="resource-hint">Escala de aprendizagem; não corresponde a litros, custo ou capacidade real.</p>
+      </div>
+      <div class="simulator-result" aria-live="polite" aria-atomic="true">
+        <div class="result-gauge"><div class="gauge-ring" id="gauge-ring" style="--score:65"><span id="scenario-score">65</span><small>índice<br>didático</small></div><span class="gauge-caption">não representa desempenho real</span></div>
+        <div class="result-copy">
+          <p class="micro">Leitura do cenário</p>
+          <h3 class="h-card" id="scenario-title">Equilibrar entrega e consumo</h3>
+          <p id="scenario-copy">O cenário ilustra um compromisso entre recursos e objetivo. O resultado é apenas uma escala de aprendizagem.</p>
+          <div class="result-meter"><span>Recursos</span><div class="meter-track"><i id="resource-meter"></i></div><b id="resource-meter-value">60</b></div>
+          <div class="result-meter"><span>Meta</span><div class="meter-track"><i id="goal-meter"></i></div><b id="goal-meter-value">70</b></div>
+          <span class="tag tag-concept">Cenário conceitual</span>
+        </div>
+      </div>
+    </div>
+    <p class="simulator-foot"><strong>Importante:</strong> este exercício usa apenas controles fictícios da interface. Não utiliza telemetria, especificações, motor ou dados reais de caminhões.</p>
+    <div class="score-box" id="score-section" hidden>
+      <div id="event-list"></div>
+      <form class="score-form" id="score-form" hidden>
+        <h3 class="h-card">Registrar este cenário em um evento</h3>
+        <p class="field-hint">Disponível apenas enquanto um evento publicado aceita pontuações. Use um pseudônimo; não informe nome real.</p>
+        <label for="score-pseudonym">Pseudônimo (2–24 caracteres)</label>
+        <input id="score-pseudonym" name="pseudonym" type="text" minlength="2" maxlength="24" autocomplete="off" required>
+        <label class="check"><input type="checkbox" id="score-consent" required> Li o aviso e consinto com o uso do pseudônimo e da pontuação neste evento.</label>
+        <button class="button" type="submit">Enviar pontuação</button>
+        <p class="field-hint" id="score-status" role="status"></p>
+      </form>
+      <div class="leaderboard" id="leaderboard" hidden></div>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="page-shell footer-top">
+      <div class="footer-brand">
+        <a class="wordmark wordmark-footer" href="/" aria-label="Rota / Vetor — página inicial">
+          <svg class="wordmark-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="g1" d="M5 27 11 7h3.600L8.600 27z"/><path class="g2" d="M13 27 20 3h4l-7 24z"/><path class="g3" d="M22 27 27 10h3.400L25.400 27z"/></svg>
+          <span class="wordmark-text"><strong>Rota<b>/</b>Vetor</strong><small>Qualidade em movimento</small></span>
+        </a>
+        <p class="footer-statement">Um guia independente sobre o que sustenta o desempenho de um caminhão: material, precisão, controle, manutenção e missão.</p>
+      </div>
+      <nav class="footer-col" aria-label="Páginas do projeto">
+        <h2>Explorar</h2>
+        <ul>
+          <li><a href="/qualidade">Qualidade</a></li>
+          <li><a href="/pecas">Peças e componentes</a></li>
+          <li><a href="/desempenho">Desempenho</a></li>
+          <li><a href="/modelos">Modelos</a></li>
+          <li><a href="/historia">História</a></li>
+          <li><a href="/experiencia">Experiência</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Transparência">
+        <h2>Transparência</h2>
+        <ul>
+          <li><a href="/fontes">Fontes e referências</a></li>
+          <li><a href="/fontes#creditos">Créditos de imagens</a></li>
+          <li><a href="/fontes#licencas">Licenças</a></li>
+          <li><a href="/fontes#limites">Limites da informação</a></li>
+          <li><a href="/admin">Painel administrativo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page-shell footer-independence">
+      <p><strong>Projeto independente e não oficial.</strong> Rota / Vetor é uma iniciativa educativa e editorial. Não é oficial, patrocinado, aprovado ou endossado pela Cummins, pela IVECO ou pela Meritor, e não afirma parceria atual entre essas empresas. Nomes de marcas aparecem apenas para identificar assuntos e fotografias documentadas.</p>
+    </div>
+    <div class="page-shell footer-bottom">
+      <span>© 2026 Rota / Vetor</span>
+      <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pausar movimento</button>
+      <a class="back-top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

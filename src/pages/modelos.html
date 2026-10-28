@@ -1,0 +1,45 @@
+<section class="p-hero" aria-labelledby="page-title">
+  <div class="p-hero-bg" aria-hidden="true"><img src="/media/sway-hero-1280.webp" alt="" width="1280" height="720" decoding="async"></div>
+  <div class="page-shell p-hero-grid">
+    <div class="p-hero-copy">
+      <p class="kicker enter" style="--d:.3s">Portfólio documentado</p>
+      <h1 id="page-title" class="h-hero"><span class="tl"><span style="--d:.4s">Modelos.</span></span> <span class="tl"><span style="--d:.5s">Missões distintas.</span></span></h1>
+      <p class="lede enter" style="--d:.8s">Explore as famílias publicadas e abra as fichas para conferir versão, mercado, ano, especificações e a fonte de cada informação.</p>
+      <p class="p-hero-links enter" style="--d:1s"><a class="button" href="#catalogo">Abrir o catálogo <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-ghost" href="/fontes">Como ler uma ficha</a></p>
+    </div>
+    <aside class="p-stamp enter" style="--d:1.1s"><span>Portfólio</span><strong>IVECO</strong><p>Famílias documentadas, sem preços estimados.</p></aside>
+  </div>
+</section>
+
+<section class="section theme-light models-section" id="catalogo" aria-labelledby="models-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Catálogo de modelos</p><h2 id="models-title" class="h-section">Uma linha. Muitas versões.</h2></div>
+      <p class="lede">Os dados refletem as fontes que puderam ser consultadas e não significam que todas as versões estão disponíveis atualmente. Preços não são estimados.</p>
+    </div>
+    <div class="catalog-toolbar">
+      <div class="model-filters" role="group" aria-label="Filtrar famílias por categoria">
+        <button class="chip is-active" type="button" data-model-filter="all" aria-pressed="true">Todas</button>
+        <button class="chip" type="button" data-model-filter="leves" aria-pressed="false">Leves</button>
+        <button class="chip" type="button" data-model-filter="medios" aria-pressed="false">Médios</button>
+        <button class="chip" type="button" data-model-filter="semipesados" aria-pressed="false">Semipesados</button>
+        <button class="chip" type="button" data-model-filter="pesados" aria-pressed="false">Pesados</button>
+      </div>
+      <span class="model-count" id="model-count" aria-live="polite">Carregando catálogo…</span>
+    </div>
+    <div class="catalog-stage">
+      <button class="catalog-arrow catalog-prev" type="button" data-model-prev aria-label="Modelo anterior"><span aria-hidden="true">←</span></button>
+      <div class="models-grid" id="models-grid" aria-live="polite"><article class="loading-card">Carregando fichas e referências…</article></div>
+      <button class="catalog-arrow catalog-next" type="button" data-model-next aria-label="Próximo modelo"><span aria-hidden="true">→</span></button>
+    </div>
+    <div class="catalog-footer">
+      <div class="catalog-dots" id="catalog-dots" role="group" aria-label="Selecionar família de modelos"></div>
+      <p class="price-note">Preço não confirmado em fonte pública consultada. Consulte a rede oficial para configurações vigentes.</p>
+    </div>
+    <div class="parts-disclaimer" data-reveal>
+      <span class="tag tag-limit">Comparação responsável</span>
+      <p>Valores só são comparáveis quando ciclo, unidade, versão, mercado e condições são equivalentes. As fontes disponíveis não sustentam uma tabela de comparação completa entre todas as famílias.</p>
+    </div>
+  </div>
+</section>
+<dialog class="model-dialog" id="model-dialog" aria-labelledby="model-dialog-title"><div class="dialog-shell"><button class="dialog-close" type="button" data-model-dialog-close aria-label="Fechar detalhes">×</button><div id="model-dialog-content"></div></div></dialog>

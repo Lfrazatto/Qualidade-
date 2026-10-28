@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06090d">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Um percurso didático pelos critérios de qualidade, inspeção e confiabilidade, sem atribuir processos não comprovados.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Qualidade em caminhões — Rota / Vetor</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2306090d'/%3E%3Cpath fill='%238c99a5' d='M7 24 12 8h3l-5 16z'/%3E%3Cpath fill='%232f6bff' d='M14 24 20 5h3.500l-6 19z'/%3E%3Cpath fill='%23fff' d='M22 24 26 11h3l-4 13z'/%3E%3C/svg%3E">
+  <link rel="preload" href="/fonts/inter-display-800.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body data-page="qualidade">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-engine" viewBox="0 0 24 24"><path d="M3 11h2V8h4V6h5v2h3v3h2v6h-2v2H8l-2-2H3z"/><path d="M9 13h6"/></symbol>
+    <symbol id="i-transmission" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.500"/><path d="M12 3v3.500M12 17.500V21M3 12h3.500M17.500 12H21M5.600 5.600l2.400 2.400M16 16l2.400 2.400M18.400 5.600 16 8M8 16l-2.400 2.400"/></symbol>
+    <symbol id="i-driveline" viewBox="0 0 24 24"><path d="M2 12h5M17 12h5"/><rect x="7" y="8.500" width="10" height="7" rx="1"/><path d="M10 8.500v7M14 8.500v7"/></symbol>
+    <symbol id="i-brakes" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="2.500"/><path d="M16 4.800 20 9l-3.500 2.500z"/></symbol>
+    <symbol id="i-axles" viewBox="0 0 24 24"><path d="M3 12h18"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><path d="M12 12V7"/></symbol>
+    <symbol id="i-wheels" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.500"/><path d="M12 3v5.500M12 15.500V21M3 12h5.500M15.500 12H21"/></symbol>
+    <symbol id="i-cab" viewBox="0 0 24 24"><path d="M2.500 17.500V9l3-4.500H14l3 4.500h4.500v8.500z"/><path d="M5.500 9H14"/><circle cx="8" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-fuel" viewBox="0 0 24 24"><path d="M5 20.500V5.500a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M4 20.500h12M15 10h2a2 2 0 0 1 2 2v4a1.500 1.500 0 0 0 3 0V8l-3-3"/><path d="M8 8h4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.500 3 8 7 9 4-1 7-4.500 7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3v3l5 6-5 6v3M17 3v3l-5 6 5 6v3"/></symbol>
+    <symbol id="i-speed" viewBox="0 0 24 24"><path d="M3 17a9 9 0 1 1 18 0"/><path d="m12 17 4-6"/><circle cx="12" cy="17" r="1.200"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <header class="site-header" id="topo">
+    <div class="header-shell">
+      <a class="wordmark" href="/" aria-label="Rota / Vetor — página inicial">
+        <svg class="wordmark-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="g1" d="M5 27 11 7h3.600L8.600 27z"/><path class="g2" d="M13 27 20 3h4l-7 24z"/><path class="g3" d="M22 27 27 10h3.400L25.400 27z"/></svg>
+        <span class="wordmark-text"><strong>Rota<b>/</b>Vetor</strong><small>Qualidade em movimento</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/" data-route-link="home">Início</a></li>
+          <li><a href="/historia" data-route-link="historia">História</a></li>
+          <li><a href="/qualidade" data-route-link="qualidade">Qualidade</a></li>
+          <li><a href="/pecas" data-route-link="pecas">Peças</a></li>
+          <li><a href="/desempenho" data-route-link="desempenho">Desempenho</a></li>
+          <li><a href="/modelos" data-route-link="modelos">Modelos</a></li>
+          <li><a href="/experiencia" data-route-link="experiencia">Experiência</a></li>
+          <li><a href="/fontes" data-route-link="fontes">Fontes</a></li>
+        </ul>
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <p class="nav-note">Projeto editorial independente e não oficial.</p>
+      </nav>
+      <a class="header-cta" href="/experiencia">Praticar <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir navegação"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="conteudo" class="page-main" tabindex="-1">
+    <nav class="page-index" aria-label="Seções desta página">
+  <ul>
+    <li><a href="#intro"><span>Introdução</span></a></li>
+    <li><a href="#dimensoes"><span>Dez dimensões</span></a></li>
+    <li><a href="#percurso"><span>Percurso interativo</span></a></li>
+    <li><a href="#detalhe-resultado"><span>Do detalhe ao resultado</span></a></li>
+    <li><a href="#influencia"><span>O que a qualidade influencia</span></a></li>
+    <li><a href="#melhoria"><span>Melhoria contínua</span></a></li>
+    <li><a href="#conexao"><span>Cummins e IVECO</span></a></li>
+    <li><a href="#encerramento"><span>Encerramento</span></a></li>
+  </ul>
+</nav>
+
+<section class="q-hero" aria-labelledby="page-title">
+  <div class="q-hero-media"><img src="/media/detail-grille-1050.webp" srcset="/media/detail-grille-480.webp 480w, /media/detail-grille-960.webp 960w, /media/detail-grille-1050.webp 1050w" sizes="100vw" alt="Recorte de detalhe da grade e do emblema de um IVECO S-Way, em tons de aço e azul" width="1050" height="840" fetchpriority="high"></div>
+  <div class="q-hero-grid" aria-hidden="true"></div>
+  <div class="q-hero-inner page-shell">
+    <p class="kicker enter" style="--d:.4s">Qualidade</p>
+    <h1 id="page-title" class="h-hero q-title"><span class="tl"><span style="--d:.5s">Qualidade</span></span> <span class="tl"><span class="q-outline" style="--d:.62s">não</span></span> <span class="tl"><span style="--d:.74s">acontece</span></span> <span class="tl"><span style="--d:.86s">por</span></span> <span class="tl"><span class="q-blue" style="--d:.98s">acaso.</span></span></h1>
+    <p class="lede enter" style="--d:1.25s">Ela está nos detalhes que nem sempre aparecem, na precisão de cada componente e na consistência necessária para transformar engenharia em confiança.</p>
+    <a class="q-scroll enter" style="--d:1.5s" href="#intro"><span class="q-scroll-line" aria-hidden="true"></span>Continuar a leitura</a>
+  </div>
+</section>
+
+<section class="section theme-light q-intro" id="intro" aria-labelledby="intro-title">
+  <div class="page-shell">
+    <div class="q-intro-grid">
+      <div><p class="kicker">Ponto de partida</p><h2 id="intro-title" class="h-section">O que significa qualidade?</h2></div>
+      <div class="prose q-intro-text" data-reveal>
+        <p class="lede">Um veículo pode impressionar pelo visual e pela potência, mas sua qualidade vai muito além do que se vê.</p>
+        <p>Ela envolve materiais adequados, componentes bem projetados, precisão, inspeção, montagem, confiabilidade e manutenção. São diferentes fatores que, juntos, influenciam a segurança, a durabilidade e o desempenho ao longo do tempo.</p>
+      </div>
+    </div>
+    <blockquote class="q-pull"><p data-fill>Qualidade não é apenas o resultado final. É o cuidado presente em cada etapa.</p></blockquote>
+    <div class="q-trio" data-stagger>
+      <div><h3 class="h-card">Garantia</h3><p>Atividades planejadas que dão confiança de que os requisitos serão atendidos.</p></div>
+      <div><h3 class="h-card">Controle</h3><p>Técnicas e ações operacionais usadas para cumprir os requisitos.</p></div>
+      <div><h3 class="h-card">Inspeção</h3><p>Medição, exame ou teste comparados a critérios especificados.</p></div>
+    </div>
+    <p class="micro q-trio-note">Três ideias que costumam ser confundidas. Definições gerais conforme a ASQ. <a class="source-link" href="https://asq.org/quality-resources/quality-assurance-vs-control" target="_blank" rel="noopener noreferrer">ASQ · garantia, controle e inspeção <span aria-hidden="true">↗</span></a></p>
+  </div>
+</section>
+
+<section class="section q-dims" id="dimensoes" aria-labelledby="dims-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Dez maneiras de olhar</p><h2 id="dims-title" class="h-section">As dimensões da qualidade.</h2></div>
+      <p class="lede">Nenhuma dimensão explica a qualidade sozinha. Abra cada uma para ver um exemplo didático e como ela se liga à segurança, à durabilidade e ao desempenho.</p>
+    </div>
+    <div class="dim-layout">
+      <div class="dim-dial" data-dial aria-hidden="false"></div>
+      <ol class="dim-list">
+        <li class="dim" id="dim-materiais" data-name="Materiais">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-materiais"><span class="dim-num">1</span><span class="dim-titles"><span class="dim-name">Materiais</span><span class="dim-headline">O ponto de partida.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-materiais" role="region" aria-labelledby="dim-materiais"><div class="dim-panel-inner">
+            <p>Todo componente começa com uma escolha de material. Ele precisa resistir ao esforço, ao calor, à vibração e ao ambiente previstos para o uso, e isso se define por especificação, não por aparência.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Um suporte exposto à umidade e ao sal das estradas exige proteção contra corrosão que um suporte interno talvez não precise.</p></div><div><h4>Por que influencia o resultado</h4><p>O material define até onde uma peça pode ser exigida. Se ele não for adequado, nenhum acabamento ou montagem compensa depois: desgaste e fadiga aparecem mais cedo.</p></div></div>
+            <p class="dim-note">Uma fotografia não revela composição, tratamento nem propriedades do material.</p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-componentes" data-name="Peças e componentes">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-componentes"><span class="dim-num">2</span><span class="dim-titles"><span class="dim-name">Peças e componentes</span><span class="dim-headline">Cada peça no seu lugar.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-componentes" role="region" aria-labelledby="dim-componentes"><div class="dim-panel-inner">
+            <p>Um caminhão reúne milhares de peças. Para cada uma importam a função, a versão correta e a compatibilidade com a configuração do veículo.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Duas peças podem parecer iguais e ser indicadas para aplicações diferentes. Código e documentação resolvem o que o olho não resolve.</p></div><div><h4>Por que influencia o resultado</h4><p>Componentes bem projetados e corretos para a aplicação reduzem falhas e retrabalho. Uma peça inadequada compromete o conjunto, mesmo sendo boa em si.</p></div></div>
+            <p class="dim-note">Sem ficha técnica, não se presume fornecedor, versão nem encaixe. <a class="source-link" href="/pecas">Explorar os sistemas <span aria-hidden="true">↗</span></a></p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-precisao" data-name="Precisão e acabamento">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-precisao"><span class="dim-num">3</span><span class="dim-titles"><span class="dim-name">Precisão e acabamento</span><span class="dim-headline">Quando cada detalhe importa.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-precisao" role="region" aria-labelledby="dim-precisao"><div class="dim-panel-inner">
+            <p>Pequenas diferenças dimensionais podem influenciar o encaixe, o funcionamento e o desgaste de um componente. Por isso, precisão e acabamento são aspectos importantes da qualidade. A forma de medir e os limites aceitáveis dependem das especificações de cada peça.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Um eixo com diâmetro fora da tolerância pode folgar ou prender no rolamento. A diferença, às vezes, é de frações de milímetro.</p></div><div><h4>Por que influencia o resultado</h4><p>Folga demais gera vibração e desgaste; folga de menos gera atrito e calor. A precisão mantém encaixe e desgaste previsíveis.</p></div></div>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-inspecao" data-name="Inspeção e controle">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-inspecao"><span class="dim-num">4</span><span class="dim-titles"><span class="dim-name">Inspeção e controle</span><span class="dim-headline">Medir antes de concluir.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-inspecao" role="region" aria-labelledby="dim-inspecao"><div class="dim-panel-inner">
+            <p>Inspecionar é comparar uma característica com um critério definido; controlar é usar técnicas e ações para cumprir os requisitos. Ver não é o mesmo que verificar.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Conferir o torque de um parafuso com instrumento calibrado é inspeção. Apenas notar que o parafuso está lá, não.</p></div><div><h4>Por que influencia o resultado</h4><p>Detecta desvios antes que virem falha em operação e gera dados para corrigir a causa. Sem critério de aceitação, a inspeção não decide nada.</p></div></div>
+            <p class="dim-note">Referência conceitual: <a class="source-link" href="https://asq.org/quality-resources/quality-assurance-vs-control" target="_blank" rel="noopener noreferrer">ASQ · garantia, controle e inspeção <span aria-hidden="true">↗</span></a></p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-montagem" data-name="Montagem e integração">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-montagem"><span class="dim-num">5</span><span class="dim-titles"><span class="dim-name">Montagem e integração</span><span class="dim-headline">O conjunto é mais que a soma.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-montagem" role="region" aria-labelledby="dim-montagem"><div class="dim-panel-inner">
+            <p>Peças corretas ainda precisam ser instaladas com os esforços e as interfaces previstos. Integrar é fazer sistemas diferentes — motor, transmissão, freios, eletrônica — funcionarem juntos.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Uma roda bem fabricada só cumpre a função se cubo, parafusos e torque de fixação seguirem a especificação do veículo.</p></div><div><h4>Por que influencia o resultado</h4><p>Uma falha de montagem pode anular a qualidade de boas peças. Boa integração reduz ruído, vibração, desgaste irregular e falhas em campo.</p></div></div>
+            <p class="dim-note">Este texto é geral e não descreve o procedimento de montagem de nenhuma fábrica.</p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-durabilidade" data-name="Durabilidade e confiabilidade">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-durabilidade"><span class="dim-num">6</span><span class="dim-titles"><span class="dim-name">Durabilidade e confiabilidade</span><span class="dim-headline">O tempo é o teste.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-durabilidade" role="region" aria-labelledby="dim-durabilidade"><div class="dim-panel-inner">
+            <p>Durabilidade é por quanto tempo algo mantém a função. Confiabilidade é a capacidade de funcionar como previsto em determinadas condições. As duas só fazem sentido quando se define o período, as condições e o que conta como falha.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>“Dura muito” não informa nada. “Cumpriu determinada quilometragem em certa rota, com certa carga” informa.</p></div><div><h4>Por que influencia o resultado</h4><p>Afeta a disponibilidade do veículo, o custo de cada parada e a segurança. É o que o operador percebe ao longo dos anos.</p></div></div>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-manutencao" data-name="Manutenção e suporte">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-manutencao"><span class="dim-num">7</span><span class="dim-titles"><span class="dim-name">Manutenção e suporte</span><span class="dim-headline">Qualidade que continua depois da entrega.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-manutencao" role="region" aria-labelledby="dim-manutencao"><div class="dim-panel-inner">
+            <p>Manutenção preventiva, inspeções periódicas, reposição correta e rede de atendimento ajudam a manter o desempenho projetado. Intervalos e procedimentos vêm do manual de cada modelo.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Trocar um filtro fora do intervalo, ou com uma peça inadequada, pode comprometer um motor que estava em perfeito estado.</p></div><div><h4>Por que influencia o resultado</h4><p>Mesmo um bom produto perde desempenho sem cuidado. A manutenção transforma qualidade de projeto em qualidade em uso.</p></div></div>
+            <p class="dim-note">Não extrapole recomendações de manutenção entre modelos, versões e mercados.</p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-seguranca" data-name="Segurança">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-seguranca"><span class="dim-num">8</span><span class="dim-titles"><span class="dim-name">Segurança</span><span class="dim-headline">O que não pode falhar.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-seguranca" role="region" aria-labelledby="dim-seguranca"><div class="dim-panel-inner">
+            <p>Frenagem, estabilidade, visibilidade e proteção dependem de projeto, componentes, montagem e manutenção atuando juntos, dentro dos requisitos legais aplicáveis.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Freios em boas condições também dependem de pneus adequados e de carga bem distribuída para frear de forma previsível.</p></div><div><h4>Por que influencia o resultado</h4><p>Nenhuma característica isolada garante segurança. O cuidado em cada etapa reduz a chance de falhas em situações críticas.</p></div></div>
+            <p class="dim-note">Conteúdo didático: não substitui avaliação profissional nem a documentação do veículo.</p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-missao" data-name="Adequação à missão">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-missao"><span class="dim-num">9</span><span class="dim-titles"><span class="dim-name">Adequação à missão</span><span class="dim-headline">O caminhão certo para o trabalho.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-missao" role="region" aria-labelledby="dim-missao"><div class="dim-panel-inner">
+            <p>Um veículo de qualidade para uma missão pode ser inadequado para outra. Carga, rota, terreno, clima e jornada definem o que “bom” significa.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Uma configuração pensada para distribuição urbana, com muitas paradas, tem exigências diferentes da de uma viagem longa em rodovia.</p></div><div><h4>Por que influencia o resultado</h4><p>A mesma qualidade de fabricação rende resultados diferentes quando a especificação não combina com o uso real: consumo, desgaste e disponibilidade mudam.</p></div></div>
+            <p class="dim-note"><a class="source-link" href="/desempenho">Ver como a missão muda a leitura do desempenho <span aria-hidden="true">↗</span></a></p>
+          </div></div>
+        </li>
+        <li class="dim" id="dim-consistencia" data-name="Consistência ao longo do tempo">
+          <h3 class="dim-head"><button type="button" class="dim-toggle" aria-expanded="false" aria-controls="dimp-consistencia"><span class="dim-num">10</span><span class="dim-titles"><span class="dim-name">Consistência ao longo do tempo</span><span class="dim-headline">O mesmo padrão, unidade após unidade.</span></span><span class="dim-plus" aria-hidden="true"></span></button></h3>
+          <div class="dim-panel" id="dimp-consistencia" role="region" aria-labelledby="dim-consistencia"><div class="dim-panel-inner">
+            <p>Qualidade também é repetir o resultado: que a milésima peça seja equivalente à primeira e que o veículo se comporte de modo previsível ao longo dos anos.</p>
+            <div class="dim-cols"><div><h4>Exemplo didático</h4><p>Duas unidades do mesmo modelo devem ter encaixes e comportamento equivalentes. Quando a variação cresce, surgem ruídos e desgaste irregular.</p></div><div><h4>Por que influencia o resultado</h4><p>Quem mantém uma frota planeja revisões e estoque de peças esperando que componentes semelhantes se comportem de forma semelhante.</p></div></div>
+            <p class="dim-note">Compare resultados repetidos somente com método, unidade, condições e horizonte de uso compatíveis.</p>
+          </div></div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-light q-journey" id="percurso" aria-labelledby="journey-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Modelo educativo</p><h2 id="journey-title" class="h-section">Percurso interativo da qualidade.</h2></div>
+      <p class="lede">Do material à operação, cinco etapas ajudam a perguntar o que precisa ser verificado. É um modelo geral de aprendizagem, não o retrato dos processos de uma fábrica específica.</p>
+    </div>
+    <div class="journey" data-tabs data-journey style="--p:0">
+      <div class="journey-track" role="tablist" aria-label="Etapas do percurso">
+        <span class="journey-line" aria-hidden="true"><i></i></span>
+        <button type="button" role="tab" id="jt-material" aria-controls="jp-material" aria-selected="true"><span class="journey-node">1</span><span class="journey-label">Material</span></button>
+        <button type="button" role="tab" id="jt-component" aria-controls="jp-component" aria-selected="false" tabindex="-1"><span class="journey-node">2</span><span class="journey-label">Componente</span></button>
+        <button type="button" role="tab" id="jt-fit" aria-controls="jp-fit" aria-selected="false" tabindex="-1"><span class="journey-node">3</span><span class="journey-label">Integração</span></button>
+        <button type="button" role="tab" id="jt-inspection" aria-controls="jp-inspection" aria-selected="false" tabindex="-1"><span class="journey-node">4</span><span class="journey-label">Inspeção</span></button>
+        <button type="button" role="tab" id="jt-operation" aria-controls="jp-operation" aria-selected="false" tabindex="-1"><span class="journey-node">5</span><span class="journey-label">Operação</span></button>
+      </div>
+      <div class="journey-panels">
+        <article class="journey-panel tab-panel" role="tabpanel" id="jp-material" aria-labelledby="jt-material">
+          <div><h3 class="h-section">Requisito antes da aparência.</h3><p class="lede">Propriedades e acabamento só fazem sentido quando comparados à especificação, ao ambiente e à função prevista. Uma foto não revela composição, tratamento ou tolerância.</p></div>
+          <dl class="journey-facts"><div><dt>Pergunta de controle</dt><dd>Qual requisito definido está sendo verificado?</dd></div><div><dt>Evidência útil</dt><dd>Especificação do material e documento de rastreabilidade, conforme o requisito.</dd></div></dl>
+        </article>
+        <article class="journey-panel tab-panel" role="tabpanel" id="jp-component" aria-labelledby="jt-component" hidden>
+          <div><h3 class="h-section">Função, condição e rastreio.</h3><p class="lede">A peça precisa corresponder à aplicação prevista e aos critérios de recebimento. A família do veículo, a configuração e a documentação evitam atribuições baseadas apenas no nome do componente.</p></div>
+          <dl class="journey-facts"><div><dt>Pergunta de controle</dt><dd>Qual versão e identificação do componente constam no documento?</dd></div><div><dt>Evidência útil</dt><dd>Código da peça, versão e ficha técnica da aplicação.</dd></div></dl>
+        </article>
+        <article class="journey-panel tab-panel" role="tabpanel" id="jp-fit" aria-labelledby="jt-fit" hidden>
+          <div><h3 class="h-section">Interfaces também importam.</h3><p class="lede">Conexões, montagem e interação com outros sistemas afetam o conjunto. Esta descrição é didática e não afirma como uma marca específica valida sua produção.</p></div>
+          <dl class="journey-facts"><div><dt>Pergunta de controle</dt><dd>Quais interfaces e tolerâncias precisam ser compatíveis?</dd></div><div><dt>Evidência útil</dt><dd>Desenhos de interface, instruções de montagem e critérios de aceitação do conjunto.</dd></div></dl>
+        </article>
+        <article class="journey-panel tab-panel" role="tabpanel" id="jp-inspection" aria-labelledby="jt-inspection" hidden>
+          <div><h3 class="h-section">Medir contra um critério.</h3><p class="lede">Inspeção é medição, exame ou teste comparado a requisitos definidos. Sem método e limite de aceitação, observar não é o mesmo que concluir conformidade.</p></div>
+          <dl class="journey-facts"><div><dt>Pergunta de controle</dt><dd>Qual método, amostra e limite definem a aceitação?</dd></div><div><dt>Evidência útil</dt><dd>Resultado de medição com instrumento, método, amostra e limite de aceitação.</dd></div></dl>
+        </article>
+        <article class="journey-panel tab-panel" role="tabpanel" id="jp-operation" aria-labelledby="jt-operation" hidden>
+          <div><h3 class="h-section">Qualidade continua na missão.</h3><p class="lede">Durabilidade e confiabilidade dependem também de aplicação, carga, ambiente, uso e manutenção. Resultados só podem ser avaliados com condições e horizonte de tempo informados.</p></div>
+          <dl class="journey-facts"><div><dt>Pergunta de controle</dt><dd>Em quais condições e por quanto tempo o resultado foi observado?</dd></div><div><dt>Evidência útil</dt><dd>Registros de uso, manutenção e falhas, com condições e período informados.</dd></div></dl>
+        </article>
+      </div>
+      <div class="journey-nav"><button type="button" class="button button-ghost" data-journey-prev>Etapa anterior</button><button type="button" class="button" data-journey-next>Próxima etapa <span class="arrow" aria-hidden="true">→</span></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-graphite q-chain" id="detalhe-resultado" aria-labelledby="chain-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Uma cadeia de dependências</p><h2 id="chain-title" class="h-section">Do detalhe ao resultado.</h2></div>
+      <p class="lede">Cada elo depende dos anteriores. Selecione um elo para ver o que ele entrega, de que depende e o que torna possível.</p>
+    </div>
+    <div class="chain" data-chain>
+      <ol class="chain-nodes">
+        <li><button type="button" class="chain-node is-active" data-chain-node="0" aria-pressed="true"><span class="chain-dot" aria-hidden="true"></span><span>Material adequado</span></button></li>
+        <li><button type="button" class="chain-node" data-chain-node="1" aria-pressed="false"><span class="chain-dot" aria-hidden="true"></span><span>Precisão dimensional</span></button></li>
+        <li><button type="button" class="chain-node" data-chain-node="2" aria-pressed="false"><span class="chain-dot" aria-hidden="true"></span><span>Montagem correta</span></button></li>
+        <li><button type="button" class="chain-node" data-chain-node="3" aria-pressed="false"><span class="chain-dot" aria-hidden="true"></span><span>Inspeção</span></button></li>
+        <li><button type="button" class="chain-node" data-chain-node="4" aria-pressed="false"><span class="chain-dot" aria-hidden="true"></span><span>Confiabilidade ao longo do uso</span></button></li>
+      </ol>
+      <div class="chain-detail" aria-live="polite" aria-atomic="true">
+        <h3 class="h-card" data-chain-title>Material adequado</h3>
+        <dl><div><dt>Entrega</dt><dd data-chain-gives>Uma base com propriedades compatíveis com a função da peça.</dd></div><div><dt>Depende de</dt><dd data-chain-needs>Do requisito de projeto e do ambiente de uso previstos.</dd></div><div><dt>Torna possível</dt><dd data-chain-enables>Peças que podem ser fabricadas e acabadas dentro do especificado.</dd></div></dl>
+      </div>
+      <div class="chain-actions"><button type="button" class="button" data-chain-play>Percorrer a cadeia <span class="arrow" aria-hidden="true">→</span></button></div>
+    </div>
+    <p class="micro chain-note"><span class="tag tag-limit">Representação conceitual</span> A sequência real de fabricação, os controles e os critérios de aprovação variam conforme o produto e o processo. Este esquema não descreve nenhuma fábrica.</p>
+  </div>
+</section>
+
+<section class="section theme-light q-influence" id="influencia" aria-labelledby="influence-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Para onde a qualidade aponta</p><h2 id="influence-title" class="h-section">O que a qualidade influencia?</h2></div>
+      <p class="lede">Quatro resultados que o operador percebe. Nenhum depende de um único fator: o resultado vem do projeto, dos componentes, da fabricação, da manutenção e das condições de operação.</p>
+    </div>
+    <div class="influence" data-influence>
+      <article class="influence-panel is-open">
+        <h3><button type="button" class="influence-toggle" aria-expanded="true" aria-controls="inf-seguranca"><svg class="icon"><use href="#i-shield"/></svg><span class="influence-name">Segurança</span></button></h3>
+        <div class="influence-body" id="inf-seguranca"><p class="influence-lead">Em sistemas como freios, rodas e direção, uma falha tem consequências graves. Por isso, os requisitos são mais rigorosos.</p><p><b>Exemplo didático:</b> pneus gastos reduzem o que freios novos conseguem entregar.</p><p class="influence-limit">Nenhum item isolado garante segurança. Ela depende do conjunto, da manutenção e da forma de operar.</p></div>
+      </article>
+      <article class="influence-panel">
+        <h3><button type="button" class="influence-toggle" aria-expanded="false" aria-controls="inf-confiabilidade"><svg class="icon"><use href="#i-check"/></svg><span class="influence-name">Confiabilidade</span></button></h3>
+        <div class="influence-body" id="inf-confiabilidade"><p class="influence-lead">É a capacidade de funcionar como previsto, quando é preciso, nas condições definidas.</p><p><b>Exemplo didático:</b> um veículo que opera uma rota longa sem paradas imprevistas por falha de componente.</p><p class="influence-limit">Só se afirma confiabilidade com dados de uso, período e critério de falha definidos.</p></div>
+      </article>
+      <article class="influence-panel">
+        <h3><button type="button" class="influence-toggle" aria-expanded="false" aria-controls="inf-durabilidade"><svg class="icon"><use href="#i-hourglass"/></svg><span class="influence-name">Durabilidade</span></button></h3>
+        <div class="influence-body" id="inf-durabilidade"><p class="influence-lead">Quanto tempo a função se mantém, com um desgaste dentro do esperado para o uso.</p><p><b>Exemplo didático:</b> um componente que chega ao intervalo de troca indicado no manual sem desgaste anormal.</p><p class="influence-limit">O mesmo componente dura de forma diferente em rotas, cargas e climas distintos.</p></div>
+      </article>
+      <article class="influence-panel">
+        <h3><button type="button" class="influence-toggle" aria-expanded="false" aria-controls="inf-desempenho"><svg class="icon"><use href="#i-speed"/></svg><span class="influence-name">Desempenho</span></button></h3>
+        <div class="influence-body" id="inf-desempenho"><p class="influence-lead">O que o veículo entrega na operação: força, consumo, velocidade média, disponibilidade.</p><p><b>Exemplo didático:</b> o mesmo caminhão rende de modo diferente carregado ou vazio, em serra ou em planície.</p><p class="influence-limit">Dados de desempenho só se comparam com versão, método e condições equivalentes. <a class="source-link" href="/desempenho">Ver Desempenho <span aria-hidden="true">↗</span></a></p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section q-improve" id="melhoria" aria-labelledby="improve-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Além de achar defeitos</p><h2 id="improve-title" class="h-section">Qualidade é melhoria contínua.</h2></div>
+      <p class="lede">Qualidade não se resume a identificar defeitos. Envolve prevenir problemas, analisar resultados, compreender causas, padronizar boas práticas e buscar melhorias, em ciclos.</p>
+    </div>
+    <div class="pdca" data-tabs data-pdca style="--a:0deg">
+      <div class="pdca-ring">
+        <div class="pdca-orbit" aria-hidden="true"><span></span></div>
+        <div class="pdca-center" aria-hidden="true"><strong>Ciclo</strong><span>contínuo</span></div>
+        <div class="pdca-tablist" role="tablist" aria-label="Etapas do ciclo de melhoria">
+          <button type="button" role="tab" id="pt-plan" class="pdca-node pdca-n0" aria-controls="pp-plan" aria-selected="true">Planejar</button>
+          <button type="button" role="tab" id="pt-do" class="pdca-node pdca-n1" aria-controls="pp-do" aria-selected="false" tabindex="-1">Executar</button>
+          <button type="button" role="tab" id="pt-check" class="pdca-node pdca-n2" aria-controls="pp-check" aria-selected="false" tabindex="-1">Verificar</button>
+          <button type="button" role="tab" id="pt-act" class="pdca-node pdca-n3" aria-controls="pp-act" aria-selected="false" tabindex="-1">Agir</button>
+        </div>
+      </div>
+      <div class="pdca-panels">
+        <article class="pdca-panel tab-panel" role="tabpanel" id="pp-plan" aria-labelledby="pt-plan"><h3 class="h-card">Prevenir antes que o problema apareça.</h3><p>Reconhecer uma oportunidade de melhoria e planejar a mudança: olhar riscos, definir o que se quer melhorar e como isso será medido.</p><p class="pdca-example"><b>Exemplo didático:</b> uma oficina nota retrabalho frequente na troca de um componente e decide revisar o procedimento.</p></article>
+        <article class="pdca-panel tab-panel" role="tabpanel" id="pp-do" aria-labelledby="pt-do" hidden><h3 class="h-card">Testar em pequena escala.</h3><p>Aplicar a mudança de forma limitada para aprender sem arriscar a operação inteira.</p><p class="pdca-example"><b>Exemplo didático:</b> usar o novo procedimento em um único turno por duas semanas.</p></article>
+        <article class="pdca-panel tab-panel" role="tabpanel" id="pp-check" aria-labelledby="pt-check" hidden><h3 class="h-card">Analisar e compreender as causas.</h3><p>Comparar o que aconteceu com o esperado, olhar os dados e perguntar por quê. Resolver o sintoma sem entender a causa costuma trazer o problema de volta.</p><p class="pdca-example"><b>Exemplo didático:</b> comparar o retrabalho antes e depois e investigar por que ele ainda ocorre em alguns casos.</p></article>
+        <article class="pdca-panel tab-panel" role="tabpanel" id="pp-act" aria-labelledby="pt-act" hidden><h3 class="h-card">Padronizar e buscar a próxima melhoria.</h3><p>Se a mudança funcionou, ela vira padrão e é ampliada. Se não, o ciclo recomeça com um novo plano.</p><p class="pdca-example"><b>Exemplo didático:</b> incorporar o procedimento às instruções de trabalho e iniciar a próxima melhoria.</p></article>
+        <p class="micro pdca-source">O ciclo PDCA (Plan-Do-Check-Act) é um modelo geral de gestão da mudança descrito pela ASQ. Não representa procedimento de nenhuma empresa. <a class="source-link" href="https://asq.org/quality-resources/pdca-cycle" target="_blank" rel="noopener noreferrer">ASQ · ciclo PDCA <span aria-hidden="true">↗</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-light q-connection" id="conexao" aria-labelledby="connection-title">
+  <div class="page-shell">
+    <div class="section-head">
+      <div><p class="kicker">Do conceito ao caminhão</p><h2 id="connection-title" class="h-section">Qualidade no universo Cummins e IVECO.</h2></div>
+      <p class="lede">Engenharia, fabricação, controle, componentes, manutenção e aplicação importam para o desempenho de veículos comerciais. Aqui, cada afirmação mostra se é um conceito geral ou um fato com fonte.</p>
+    </div>
+    <ul class="ledger" data-stagger>
+      <li class="ledger-row"><div class="ledger-tag"><span class="tag tag-concept">Conceito geral</span></div><div class="ledger-body"><h3 class="h-card">Por que o conjunto importa</h3><p>Em um caminhão, o desempenho resulta de engenharia, fabricação, controle, componentes, manutenção e aplicação. Um motor potente depende de transmissão, eixos e freios compatíveis e de uma operação adequada.</p></div></li>
+      <li class="ledger-row"><div class="ledger-tag"><span class="tag tag-fact">Fato documentado · IVECO</span></div><div class="ledger-body"><h3 class="h-card">1975: a origem da IVECO</h3><p>Segundo o Iveco Group, a IVECO foi criada em 1975 pela união de Fiat, OM e Lancia (Itália), Unic (França) e Magirus Deutz (Alemanha).</p><a class="source-link" href="https://www.ivecogroup.com/group/about_us/our_history" target="_blank" rel="noopener noreferrer">Iveco Group · história <span aria-hidden="true">↗</span></a></div></li>
+      <li class="ledger-row"><div class="ledger-tag"><span class="tag tag-fact">Fato documentado · IVECO, 2017</span></div><div class="ledger-body"><h3 class="h-card">Uma fábrica na Espanha e o programa WCM</h3><p>Em abril de 2017, a IVECO comunicou que sua fábrica de Madri foi a primeira das 64 unidades da CNH Industrial no mundo a atingir o nível Gold do programa World Class Manufacturing, descrito no texto como um conjunto de padrões elevados para a gestão integrada de fábricas e processos.</p><p class="ledger-limit"><b>Limite:</b> é uma declaração corporativa de 2017 sobre uma unidade na Espanha. Não descreve fábricas no Brasil nem foi verificada de forma independente aqui.</p><a class="source-link" href="https://www.iveco.com/global/Press/PressReleases/2017/IVECO-Madrid-plant-achieves-Gold-Level-in-World-Class-Manufacturing" target="_blank" rel="noopener noreferrer">IVECO · comunicado de 2017 <span aria-hidden="true">↗</span></a></div></li>
+      <li class="ledger-row"><div class="ledger-tag"><span class="tag tag-fact">Fato documentado · Cummins</span></div><div class="ledger-body"><h3 class="h-card">Portfólio de transmissão e freios</h3><p>A Cummins descreve em seu site um portfólio de sistemas de transmissão e freios que inclui eixos, freios, suspensão e driveline, e informa que a aquisição da Meritor ocorreu em agosto de 2022.</p><p class="ledger-limit"><b>Limite:</b> a página descreve o portfólio da Cummins. Não comprova que essas peças estejam instaladas em veículos IVECO.</p><a class="source-link" href="https://www.cummins.com/en-na/components/drivetrain-systems" target="_blank" rel="noopener noreferrer">Cummins · drivetrain and braking <span aria-hidden="true">↗</span></a></div></li>
+      <li class="ledger-row"><div class="ledger-tag"><span class="tag tag-fact">Fato histórico · 1996–2008</span></div><div class="ledger-body"><h3 class="h-card">Uma aliança que terminou</h3><p>A European Engine Alliance reuniu Cummins, Iveco e New Holland a partir de 1996, para uma geração de motores de 4, 5 e 6 litros. Em 2008, a Cummins anunciou a venda de sua participação de um terço à Fiat Powertrain Technologies.</p><p class="ledger-limit"><b>Limite:</b> é uma colaboração histórica encerrada. Não indica parceria atual.</p><a class="source-link" href="https://investor.cummins.com/news/detail/58/cummins-announces-conclusion-of-joint-ventures-with-cnh" target="_blank" rel="noopener noreferrer">Cummins · comunicado de 2008 <span aria-hidden="true">↗</span></a></div></li>
+    </ul>
+    <aside class="unknowns" data-reveal aria-labelledby="unknowns-title">
+      <div><span class="tag tag-limit">O que as fontes não dizem</span><h3 id="unknowns-title" class="h-card">Lacunas declaradas</h3></div>
+      <ul>
+        <li>Quais produtos são fabricados na unidade de Osasco.</li>
+        <li>Certificações específicas de qualquer empresa citada.</li>
+        <li>Resultados de testes, indicadores de fábrica ou procedimentos internos.</li>
+        <li>Fornecedores ou componentes de um modelo e versão determinados.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="q-closing" id="encerramento" aria-labelledby="closing-title">
+  <div class="page-shell q-closing-inner">
+    <h2 id="closing-title" class="h-hero">Por trás de um bom resultado, existe um padrão de qualidade.</h2>
+    <p class="lede">Entender a qualidade é enxergar além do produto final. É compreender como precisão, controle, confiabilidade e melhoria contínua contribuem para resultados consistentes.</p>
+    <div class="hero-actions"><a class="button" href="/pecas">Explorar os componentes <span class="arrow" aria-hidden="true">↗</span></a><a class="button button-ghost" href="/desempenho">Entender o desempenho</a><a class="button button-ghost" href="/modelos">Conhecer os modelos</a></div>
+    <p class="micro q-closing-note">Base conceitual: definições gerais da ASQ e princípios de gestão da ISO. Eles não certificam nem descrevem o sistema de nenhuma empresa deste projeto. <a href="https://www.iso.org/contents/news/insights/Quality%20management%20system/quality-management-principles.html" target="_blank" rel="noopener noreferrer">ISO · princípios de gestão</a> · <a href="/fontes">Todas as fontes</a></p>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="page-shell footer-top">
+      <div class="footer-brand">
+        <a class="wordmark wordmark-footer" href="/" aria-label="Rota / Vetor — página inicial">
+          <svg class="wordmark-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path class="g1" d="M5 27 11 7h3.600L8.600 27z"/><path class="g2" d="M13 27 20 3h4l-7 24z"/><path class="g3" d="M22 27 27 10h3.400L25.400 27z"/></svg>
+          <span class="wordmark-text"><strong>Rota<b>/</b>Vetor</strong><small>Qualidade em movimento</small></span>
+        </a>
+        <p class="footer-statement">Um guia independente sobre o que sustenta o desempenho de um caminhão: material, precisão, controle, manutenção e missão.</p>
+      </div>
+      <nav class="footer-col" aria-label="Páginas do projeto">
+        <h2>Explorar</h2>
+        <ul>
+          <li><a href="/qualidade">Qualidade</a></li>
+          <li><a href="/pecas">Peças e componentes</a></li>
+          <li><a href="/desempenho">Desempenho</a></li>
+          <li><a href="/modelos">Modelos</a></li>
+          <li><a href="/historia">História</a></li>
+          <li><a href="/experiencia">Experiência</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Transparência">
+        <h2>Transparência</h2>
+        <ul>
+          <li><a href="/fontes">Fontes e referências</a></li>
+          <li><a href="/fontes#creditos">Créditos de imagens</a></li>
+          <li><a href="/fontes#licencas">Licenças</a></li>
+          <li><a href="/fontes#limites">Limites da informação</a></li>
+          <li><a href="/admin">Painel administrativo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page-shell footer-independence">
+      <p><strong>Projeto independente e não oficial.</strong> Rota / Vetor é uma iniciativa educativa e editorial. Não é oficial, patrocinado, aprovado ou endossado pela Cummins, pela IVECO ou pela Meritor, e não afirma parceria atual entre essas empresas. Nomes de marcas aparecem apenas para identificar assuntos e fotografias documentadas.</p>
+    </div>
+    <div class="page-shell footer-bottom">
+      <span>© 2026 Rota / Vetor</span>
+      <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pausar movimento</button>
+      <a class="back-top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

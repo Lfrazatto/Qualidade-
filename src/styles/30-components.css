@@ -1,0 +1,51 @@
+.icon{width:1.6em;height:1.6em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.go{display:inline-grid;place-items:center;width:44px;height:44px;border:1.5px solid currentColor;border-radius:50%;flex:none;transition:background .3s,color .3s,transform .4s var(--ease)}
+.go .icon{width:20px;height:20px}
+a:hover>.go,a:focus-visible>.go{background:var(--azul);border-color:var(--azul);color:#fff;transform:rotate(45deg)}
+
+/* Seletores (chips) */
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:1.5px solid var(--line);border-radius:999px;font-weight:500;font-size:.95rem;color:var(--fg-soft);background:transparent;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.chip:hover{border-color:var(--accent);color:var(--fg)}
+.chip.is-active,.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.theme-light .chip.is-active,.theme-light .chip[aria-pressed="true"],.theme-steel .chip.is-active,.theme-steel .chip[aria-pressed="true"]{color:#fff}
+.chip:active{transform:scale(.97)}
+
+/* Painéis de abas */
+.tab-panel:not([hidden]){animation:panel-in .55s var(--ease-out) both}
+@keyframes panel-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* Sumário nativo */
+details{border-top:1px solid var(--line);margin-top:18px}
+summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding-block:8px;cursor:pointer;font-weight:600;list-style:none;color:var(--fg)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font:400 1.5rem/1 var(--sans);color:var(--accent);transition:transform .35s var(--ease)}
+details[open]>summary::after{transform:rotate(45deg)}
+details>p{padding-bottom:6px;color:var(--fg-soft);max-width:60ch;animation:fade-in .5s both}
+
+/* Diagramas SVG */
+.diagram{width:100%;height:auto;max-height:260px}
+.diagram text{fill:var(--fg-mute);font:500 11px var(--sans)}
+.diagram .ax{stroke:var(--fg-mute);stroke-width:1.5}
+.diagram .bar{fill:var(--fg-mute);transform-box:fill-box;transform-origin:bottom;animation:bar-grow .9s var(--ease-out) both}
+.diagram .bar-b{fill:var(--accent);animation-delay:.15s}
+@keyframes bar-grow{from{transform:scaleY(0)}}
+.diagram .ring{fill:none;stroke:var(--fg-mute);stroke-width:1.5}
+.diagram .hit{fill:var(--accent)}
+.diagram .arrow-line{stroke:var(--accent);stroke-width:2.5;stroke-dasharray:150;animation:dash .9s var(--ease-out) both}
+.diagram .arrow-head{fill:var(--accent);animation:fade-in .3s .8s both}
+@keyframes dash{from{stroke-dashoffset:150}to{stroke-dashoffset:0}}
+.diagram .target{stroke:var(--fg-mute);stroke-width:1.5;stroke-dasharray:5 5}
+.diagram .trend{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;animation:dash2 1.4s var(--ease-out) both}
+@keyframes dash2{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
+
+/* Selo de tipo de informação (fato documentado x conceito geral) */
+.tag{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:999px;font-size:.82rem;font-weight:600;border:1px solid currentColor}
+.tag::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.tag-fact{color:var(--accent)}
+.tag-concept{color:var(--fg-mute)}
+.tag-limit{color:#b8731a}
+.dark-tag-limit,.theme-graphite .tag-limit,.section:not(.theme-light):not(.theme-steel) .tag-limit{color:var(--alerta)}
+
+/* Diálogo de modelos / genérico */
+dialog{color:var(--fg)}
+dialog::backdrop{background:rgba(3,6,9,.72);backdrop-filter:blur(4px)}

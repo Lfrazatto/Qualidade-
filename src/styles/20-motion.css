@@ -1,0 +1,54 @@
+/* Movimento: só transform/opacity/clip-path. Revelações ao rolar existem apenas com JS (.has-motion). */
+.has-motion [data-reveal]:not(.is-visible){opacity:0;transform:translateY(32px)}
+.has-motion [data-reveal]{transition:opacity .9s var(--ease-out),transform 1s var(--ease-out);transition-delay:calc(var(--i,0)*80ms)}
+/* A máscara age sobre a imagem filha; o elemento observado nunca é recortado (o IntersectionObserver ignoraria um alvo recortado). */
+.has-motion [data-reveal="mask"]:not(.is-visible){opacity:1;transform:none}
+.has-motion [data-reveal="mask"]>img{clip-path:inset(0);transition:clip-path 1.3s var(--ease-out)}
+.has-motion [data-reveal="mask"]:not(.is-visible)>img{clip-path:inset(0 0 100% 0)}
+.has-motion [data-reveal="line"]:not(.is-visible){opacity:1;transform:scaleX(0)}
+.has-motion [data-reveal="line"]{transform-origin:left;transition:transform 1.3s var(--ease-out)}
+.has-motion [data-reveal="fade"]:not(.is-visible){transform:none}
+.has-motion [data-reveal="scale"]:not(.is-visible){transform:scale(.94)}
+
+/* Linhas que se desenham: valor definido por --draw (0..1) via JS ou por .is-visible */
+.draw-line{transform-origin:left;transform:scaleX(var(--draw,1))}
+.draw-line-y{transform-origin:top;transform:scaleY(var(--draw,1))}
+.has-motion [data-draw]:not(.is-visible) .draw-line{transform:scaleX(0)}
+.has-motion [data-draw] .draw-line{transition:transform 1.4s var(--ease-out)}
+
+/* Texto que se acende conforme a rolagem */
+.fill-text .fw{color:var(--fg-mute);opacity:.38;transition:color .5s,opacity .5s}
+.fill-text .fw.is-lit{color:var(--fg);opacity:1}
+
+/* Entrada de página (CSS puro, sem depender de JS) */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes word-up{from{transform:translateY(112%)}to{transform:none}}
+@keyframes bg-reveal{from{clip-path:inset(18% 0 0 0);transform:scale(1.14)}to{clip-path:inset(0);transform:scale(1)}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes draw-x{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse-ring{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes drift{0%,100%{transform:scale(1.04) translate3d(0,0,0)}50%{transform:scale(1.1) translate3d(-1.2%,-.8%,0)}}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.enter{animation:rise .9s var(--ease-out) both;animation-delay:var(--d,0s)}
+.title-lines{display:block}
+.tl{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.tl>span{display:inline-block;animation:word-up 1s var(--ease-out) both;animation-delay:var(--d,0s)}
+
+/* Faixa de termos (decorativa) */
+.marquee{overflow:hidden;background:var(--azul);color:#fff;border-block:1px solid rgba(255,255,255,.2)}
+.marquee-track{display:flex;width:max-content;animation:marquee 46s linear infinite}
+.marquee-track span{display:flex;align-items:center;gap:clamp(24px,4vw,56px);padding:18px clamp(12px,2vw,28px);font:800 clamp(1.1rem,2.2vw,1.8rem)/1 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.marquee-track i{width:10px;height:10px;background:#fff;transform:skewX(-24deg);flex:none}
+.marquee:hover .marquee-track{animation-play-state:paused}
+
+/* Movimento reduzido ou desativado pelo visitante */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .marquee-track{animation:none}
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+}
+html[data-motion="off"]{scroll-behavior:auto}
+html[data-motion="off"] *,html[data-motion="off"] *::before,html[data-motion="off"] *::after{animation:none!important;transition-duration:.001ms!important;transition-delay:0s!important}
+html[data-motion="off"] .fill-text .fw{opacity:1;color:var(--fg)}

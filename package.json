@@ -1,0 +1,11 @@
+{
+  "name": "iveco-cummins-performance-site",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "assets": "python3 scripts/optimize-editorial-assets.py",
+    "build": "node scripts/build.mjs",
+    "check": "npm run build && node --check dist/worker.mjs && node --check dist/site/app.js && node --check src/admin.js && node scripts/verify-site.mjs"
+  }
+}
